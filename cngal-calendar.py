@@ -69,16 +69,13 @@ _TO_REPLACE_ISO = (
 )
 
 # Cli testing one-liner:
-# curl -X 'GET' 'https://api.cngal.org/api/home/ListPublishedGames'  -H 'accept: application/json'
+# curl -X 'GET' 'https://api.cngal.org/api/home/ListUpcomingGames'  -H 'accept: application/json'
 
-api_published = "/api/home/ListPublishedGames"
-api_upcoming = "/api/home/ListUpcomingGames"
-
-
-def get_list(release_type):
+def get_list():
     api_url = "https://api.cngal.org"
+    api_upcoming = "/api/home/ListUpcomingGames"
     headers = {"Content-Type": "application/json"}
-    url = api_url + release_type
+    url = api_url + api_upcoming
 
     response = requests.get(url, headers=headers)
 
@@ -235,6 +232,6 @@ def make_calendar(processed_results):
 
 
 os.makedirs(_OUTPUT_FOLDER, exist_ok=True)
-j = get_list(api_upcoming)
+j = get_list()
 results = process_json(j)
 make_calendar(results)
