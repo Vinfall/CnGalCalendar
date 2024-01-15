@@ -177,7 +177,6 @@ def last_day_of_next_month(dt):
 def make_calendar(processed_results):
     cal = Calendar(creator="CnGalCalendar")
     now = datetime.now()
-    event_dict = {}
 
     for result in processed_results:
         description_suffix = ""
