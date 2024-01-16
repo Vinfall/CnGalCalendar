@@ -71,6 +71,7 @@ _TO_REPLACE_ISO = (
 # Cli testing one-liner:
 # curl -X 'GET' 'https://api.cngal.org/api/home/ListUpcomingGames'  -H 'accept: application/json'
 
+
 def get_list():
     api_url = "https://api.cngal.org"
     api_upcoming = "/api/home/ListUpcomingGames"
