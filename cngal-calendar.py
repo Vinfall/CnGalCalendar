@@ -36,10 +36,10 @@ _TO_REPLACE = (
     ("q2-q3", "7月"),
     ("q3-q4", "10月"),
     # Keyword second
-    ("spring", "3月"),
-    ("summer", "6月"),
-    ("fall", "9月"),
-    ("winter", "12月"),
+    ("spring|春(季)?", "3月"),
+    ("summer|夏(季)?", "6月"),
+    ("fall|秋(季)?", "9月"),
+    ("winter|冬(季)?", "12月"),
     ("q1(季度)?", "2月"),
     ("q2(季度)?", "5月"),
     ("q3(季度)?", "8月"),
@@ -59,6 +59,7 @@ _TO_REPLACE = (
     # Block word list
     ("^预[计定期]", ""),
     ("发[售布].*?$", ""),
+    ("[Ww]ishlist.*?$", ""),
     (" ", ""),
 )
 # Convert time string like `2024年8月` to partial/full YYYY-MM-DD
@@ -124,7 +125,9 @@ def process_json(results):
                 "released"
             ] = f"{date_parts[0]}-{date_parts[1]:0>2}-{date_parts[2]:0>2}"
 
-        processed_results.append(processed_result)
+        # Ignore release without valid date
+        if processed_result["released"]:
+            processed_results.append(processed_result)
 
     # Save raw results to JSON file
     with open(
