@@ -60,6 +60,7 @@ _TO_REPLACE = (
     ("^预[计定期]", ""),
     ("发[售布].*?$", ""),
     ("[Ww]ishlist.*?$", ""),
+    ("TB[AD]|tb[ad]", ""),
     (" ", ""),
 )
 # Convert time string like `2024年8月` to partial/full YYYY-MM-DD
@@ -116,14 +117,17 @@ def process_json(results):
             processed_result["released"] = re.sub(
                 pair[0], pair[1], processed_result["released"]
             )
-        # 补全月份和日期的数字前面的零
-        date_parts = processed_result["released"].split("-")
-        if len(date_parts) == 2:
-            processed_result["released"] = f"{date_parts[0]}-{date_parts[1]:0>2}"
-        elif len(date_parts) == 3:
-            processed_result[
-                "released"
-            ] = f"{date_parts[0]}-{date_parts[1]:0>2}-{date_parts[2]:0>2}"
+        # Format date string to ISO date
+        if processed_result["released"] != "":
+            date_parts = processed_result["released"].split("-")
+            if len(date_parts) == 2:
+                processed_result["released"] = f"{date_parts[0]}-{date_parts[1]:0>2}"
+            elif len(date_parts) == 3:
+                processed_result[
+                    "released"
+                ] = f"{date_parts[0]}-{date_parts[1]:0>2}-{date_parts[2]:0>2}"
+        else:
+            break
 
         # Ignore release without valid date
         if processed_result["released"]:
