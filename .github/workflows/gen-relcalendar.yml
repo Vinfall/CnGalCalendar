@@ -33,7 +33,7 @@ jobs:
 
       - name: check release changes
         id: check_changes
-        run: if [[ $(git diff --name-only HEAD^ HEAD) == *"output/release.txt"* ]]; then echo "::set-output name=changes::true"; else echo "::set-output name=changes::false"; fi
+        run: if [[ $(git diff --name-only HEAD^ HEAD) == *"output/cngal-release.txt"* ]]; then echo "::set-output name=changes::true"; else echo "::set-output name=changes::false"; fi
 
       - name: commit files only if new release is available
         if: steps.check_changes.outputs.changes == 'true'
