@@ -27,9 +27,16 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: execute py script
-        run: python cngal-calendar.py
+        run: |
+          python cngal-calendar.py
+          sed -i 's/LAST-MODIFIED/DTSTAMP/g' output/vndb-rel-calendar.ics
 
-      - name: commit files
+      - name: check release changes
+        id: check_changes
+        run: if [[ $(git diff --name-only HEAD^ HEAD) == *"output/release.txt"* ]]; then echo "::set-output name=changes::true"; else echo "::set-output name=changes::false"; fi
+
+      - name: commit files only if new release is available
+        if: steps.check_changes.outputs.changes == 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -37,6 +44,7 @@ jobs:
           git commit -m "ics: update release calendar" -a
 
       - name: push changes
+        if: steps.check_changes.outputs.changes == 'true'
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
