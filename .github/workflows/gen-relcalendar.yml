@@ -36,7 +36,7 @@ jobs:
         run: if [[ $(git diff --name-only HEAD) == *"output/cngal-release.txt"* ]]; then echo "changes=true" > "$GITHUB_OUTPUT"; else echo "changes=false" > "$GITHUB_OUTPUT"; fi
 
       - name: commit files only if new release is available
-        if: steps.check_changes.outputs.changes == 'true'
+        if: ${{ steps.check_changes.outputs.changes == 'true' }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -44,7 +44,7 @@ jobs:
           git commit -m "ics: update release calendar" -a
 
       - name: push changes
-        if: steps.check_changes.outputs.changes == 'true'
+        if: ${{ steps.check_changes.outputs.changes == 'true' }}
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
