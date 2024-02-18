@@ -2,7 +2,7 @@ name: gen-calendar
 
 on:
   schedule:
-    - cron: '0 4 * * 2,5' # 4:00 UTC every Tuesday & Friday
+    - cron: '0 4 * * *' # 4:00 UTC everyday
   workflow_dispatch:
 
 jobs:
