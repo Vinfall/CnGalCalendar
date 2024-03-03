@@ -36,7 +36,7 @@ _TO_REPLACE = (
     ("q2-q3", "7月"),
     ("q3-q4", "10月"),
     # Keyword second
-    ("spring|春(季)?", "3月"),
+    ("spring|春(季|节)?", "3月"),
     ("summer|夏(季)?", "6月"),
     ("fall|秋(季)?", "9月"),
     ("winter|冬(季)?", "12月"),
@@ -123,9 +123,9 @@ def process_json(results):
             if len(date_parts) == 2:
                 processed_result["released"] = f"{date_parts[0]}-{date_parts[1]:0>2}"
             elif len(date_parts) == 3:
-                processed_result[
-                    "released"
-                ] = f"{date_parts[0]}-{date_parts[1]:0>2}-{date_parts[2]:0>2}"
+                processed_result["released"] = (
+                    f"{date_parts[0]}-{date_parts[1]:0>2}-{date_parts[2]:0>2}"
+                )
         else:
             break
 
