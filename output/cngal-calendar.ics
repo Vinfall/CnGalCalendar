@@ -2,18 +2,18 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:CnGalCalendar
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20240430
+DTSTART;VALUE=DATE:20240331
 CATEGORIES:cngal
-DESCRIPTION:https://www.cngal.org/entries/index/4713\n鼎新工作室预计2024年发布的第一部视觉性小说，敬请期待！
-DTSTAMP:20240327T040850Z
-SUMMARY:向阳之爱
-UID:4713
+DESCRIPTION:https://www.cngal.org/entries/index/2962\n高三。 昔日的青梅竹马怀揣着爱意再度出现，可两人关系并没有就此如以往那般靠近，因为他已心有所属。 距离倒映出恋情，当新的爱意汇聚成流之时，相互交织的物语将会是？\n发售日估算自 "2022年底"
+DTSTAMP:20240329T040851Z
+SUMMARY:爱·高三
+UID:2962
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20241231
 CATEGORIES:cngal
 DESCRIPTION:https://www.cngal.org/entries/index/150\n这是一款以女仆咖啡店为主题，融合了恋爱、冒险和经营要素的角色扮演游戏。 你临危受命，成为了一名新人店长。为了让咖啡店能够继续经营下去，你需要通过招募女仆、研发菜品、装扮店铺等方式来提升收入。 故事发生在电器街，你会在这里遇到很多有趣的人，随着关系增进，可以了解到更多他们的故事。
-DTSTAMP:20240327T040850Z
+DTSTAMP:20240329T040851Z
 SUMMARY:电器街的咖啡店
 UID:150
 END:VEVENT
@@ -21,7 +21,7 @@ BEGIN:VEVENT
 DTSTART;VALUE=DATE:20240802
 CATEGORIES:cngal
 DESCRIPTION:https://www.cngal.org/entries/index/253\n《马戏团之夜》是一款横版2D的剧情向解谜游戏，旨在讲述一场关于“爱与现实”的童话故事。
-DTSTAMP:20240327T040850Z
+DTSTAMP:20240329T040851Z
 SUMMARY:马戏团之夜
 UID:253
 END:VEVENT
@@ -29,7 +29,7 @@ BEGIN:VEVENT
 DTSTART;VALUE=DATE:20240831
 CATEGORIES:cngal
 DESCRIPTION:https://www.cngal.org/entries/index/5089\n原创西幻百合AVG游戏！
-DTSTAMP:20240327T040850Z
+DTSTAMP:20240329T040851Z
 SUMMARY:Lost Seed
 UID:5089
 END:VEVENT
@@ -37,7 +37,7 @@ BEGIN:VEVENT
 DTSTART;VALUE=DATE:20240331
 CATEGORIES:cngal
 DESCRIPTION:https://www.cngal.org/entries/index/5080\n《蓝血与尖耳朵-蜥学东渐》是一款异世界模拟经营策略游戏，玩家将作为精灵族的一名有识之士，在精灵族与蜥蜴人族的夹缝中经营一所决定两个种族未来的国际学校，与四名美少女同事度过一段难忘的时光。精灵族作为土著居民遭受外星殖民者蜥蜴人的入侵，由于双方都没办法彻底消灭对方，一种古怪的稳态逐渐形成。您可以寻求永久和平之道，利用对方为本族争取利益，亦或是尽快打破这虚伪的和平、毕其功于一役。当然，作为一名校长，您只能间接影响局势。\n发售日估算自 "2024年第一季度"
-DTSTAMP:20240327T040850Z
+DTSTAMP:20240329T040851Z
 SUMMARY:蓝血与尖耳朵-蜥学东渐
 UID:5080
 END:VEVENT
@@ -45,7 +45,7 @@ BEGIN:VEVENT
 DTSTART;VALUE=DATE:20240331
 CATEGORIES:cngal
 DESCRIPTION:https://www.cngal.org/entries/index/5140\n明末旅行题材文字冒险游戏——玩家将扮演一名盗匪，运送四名女孩从华州城至洛阳城，并在途中查明真相、做出选择。该游戏会涉及“复仇、刺杀、饥荒、拐卖、人食人”等黑暗元素，但期望给人一种正向的情绪和力量。
-DTSTAMP:20240327T040850Z
+DTSTAMP:20240329T040851Z
 SUMMARY:饿殍：明末千里行
 UID:5140
 END:VEVENT
@@ -53,7 +53,7 @@ BEGIN:VEVENT
 DTSTART;VALUE=DATE:20240331
 CATEGORIES:cngal
 DESCRIPTION:https://www.cngal.org/entries/index/5181\n一生只爱一个人的「纯爱」视觉小说。是一个你和青梅竹马妖怪少女结伴前行，互相拯救的故事。你们彼此陪伴，互相支持，从不怀疑对方，永远站在一起。你们共同经历着烦恼又欢乐的青春时光，你们把无与伦比的激情与暖流藏在互相揶揄的平淡日常里，你们守护着彼此，无论如何也不会分开。\n发售日估算自 "2024年第一季度"
-DTSTAMP:20240327T040850Z
+DTSTAMP:20240329T040851Z
 SUMMARY:夏日事件簿
 UID:5181
 END:VEVENT
@@ -61,7 +61,7 @@ BEGIN:VEVENT
 DTSTART;VALUE=DATE:20240531
 CATEGORIES:cngal
 DESCRIPTION:https://www.cngal.org/entries/index/5202\n《月白星斗-LunarGlowStellarDance》是中国美少女游戏品牌JROCKSTUDIO（玖石社）制作的全年龄向恋爱题材作品。主人公因为从小能看到鬼魂被卷入一个个非日常事件中，同时邂逅了五个可爱的女孩子，一切的阴谋都将逐渐揭晓。
-DTSTAMP:20240327T040850Z
+DTSTAMP:20240329T040851Z
 SUMMARY:月白星斗
 UID:5202
 END:VEVENT
@@ -69,7 +69,7 @@ BEGIN:VEVENT
 DTSTART;VALUE=DATE:20240801
 CATEGORIES:cngal
 DESCRIPTION:https://www.cngal.org/entries/index/4900\n“你听说过吗，有人说……”\n“在8月31号留下深刻遗憾的人，可能会被困在8月32号……”\n“永远与现实脱轨……”\n在白月高中的知名论坛“白月公园”上，一则怪谈帖子仅仅只花了几天时间，就火遍了整个校园。\n这个一眼假的帖子，却依旧成为了学生们茶余饭后的消遣，甚至被许多学生信以为真。不信鬼神的“现实派”高中生周腾，自然没有把帖子所描述的故事放在眼里。\n直到离奇的事情发生在了自己的身边……
-DTSTAMP:20240327T040850Z
+DTSTAMP:20240329T040851Z
 SUMMARY:夏末白夜
 UID:4900
 END:VEVENT
@@ -77,7 +77,7 @@ BEGIN:VEVENT
 DTSTART;VALUE=DATE:20240331
 CATEGORIES:cngal
 DESCRIPTION:https://www.cngal.org/entries/index/205\n《叛逆神魂》是个全动态立绘美少女养成、视觉刺激系RPG。你所在的学校近期发生了许多离奇事件，而校方却加强补课封闭信息。你将扮演主角，与执着游戏、绘画、编程等不同兴趣的“叛逆”少女们邂逅\,在最美的青春时光中\,你会与她们灵魂共鸣\,穿越异空\,对抗恶人灵魂\,寻找更多幻灵少女....让你的DNA动起来！\n发售日估算自 " 2024 年第一季度"
-DTSTAMP:20240327T040850Z
+DTSTAMP:20240329T040851Z
 SUMMARY:叛逆神魂GODSOUL
 UID:205
 END:VEVENT
@@ -85,7 +85,7 @@ BEGIN:VEVENT
 DTSTART;VALUE=DATE:20240831
 CATEGORIES:cngal
 DESCRIPTION:https://www.cngal.org/entries/index/4100\n成绩不好还调皮的依露林暗恋着优等生梵逸，而梵逸和隔壁班的优等生黎羽相互产生好感，原本只是发生在普通县城普通中学的普通和青春相关的普通三角恋爱故事，却因为依露林所获得的时间回溯的能力而发生了改变她大摇大摆的迟到并且和号称校内最严厉有着‘教头’一称的教导主任针尖对麦芒，明明完全没有复习却能够考出极为优秀的成绩，在无聊的课程中一跃而起，改变了老师们的上课节奏，把别人一辈子想要在课堂上做的事情在短时间内做了个遍她依靠这份能力和梵逸站在了学校的同一个高度，但也因为这份能力而使得周围人们的生活出现了极大的变故，但随着时间的流逝，依露林才发现了使用这份能力的代价，并企图回到原来的世界去
-DTSTAMP:20240327T040850Z
+DTSTAMP:20240329T040851Z
 SUMMARY:荷莱
 UID:4100
 END:VEVENT
@@ -93,7 +93,7 @@ BEGIN:VEVENT
 DTSTART;VALUE=DATE:20241231
 CATEGORIES:cngal
 DESCRIPTION:https://www.cngal.org/entries/index/246\n“连海台球俱乐部”是一款融合青春恋爱与台球休闲两种元素的游戏，讲述了孤独的男主角从一名放荡不羁的不良少年，在伙伴们的陪伴下逐渐成长为一颗闪耀的职业台球新星的故事。
-DTSTAMP:20240327T040850Z
+DTSTAMP:20240329T040851Z
 SUMMARY:连海台球俱乐部
 UID:246
 END:VEVENT
@@ -101,7 +101,7 @@ BEGIN:VEVENT
 DTSTART;VALUE=DATE:20240331
 CATEGORIES:cngal
 DESCRIPTION:https://www.cngal.org/entries/index/4848\n——在绣球花开放的季节里，与〖她〗和〖她〗的旅途。\n发售日估算自 "预计2024年2月发布demo"
-DTSTAMP:20240327T040850Z
+DTSTAMP:20240329T040851Z
 SUMMARY:旅人的紫阳 Wayfarer of Hydrangea
 UID:4848
 END:VEVENT
@@ -109,7 +109,7 @@ BEGIN:VEVENT
 DTSTART;VALUE=DATE:20240331
 CATEGORIES:cngal
 DESCRIPTION:https://www.cngal.org/entries/index/3989\n突然到来的机器人少女，打破了某自由插画师的隐世单机生活，一场人机恋爱喜剧由此开幕。\n发售日估算自 "预计2023年春节发布"
-DTSTAMP:20240327T040850Z
+DTSTAMP:20240329T040851Z
 SUMMARY:硅心
 UID:3989
 END:VEVENT
@@ -117,16 +117,16 @@ BEGIN:VEVENT
 DTSTART;VALUE=DATE:20240831
 CATEGORIES:cngal
 DESCRIPTION:https://www.cngal.org/entries/index/5412\n“过往的幽灵，叙述着凄惨的往事...”
-DTSTAMP:20240327T040850Z
+DTSTAMP:20240329T040851Z
 SUMMARY:伯克利家的女仆：重制版
 UID:5412
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20240329
+DTSTART;VALUE=DATE:20240430
 CATEGORIES:cngal
-DESCRIPTION:https://www.cngal.org/entries/index/5413\n《岚与山之彼端》是一款日式怪谈悬疑解谜游戏。五年前，横山静野的恋人五十岚真羽乘坐深夜电车，中途在一座名为“如月站台”的车站下车后便失踪，站台也消失不见。五年后，成为侦探的横山静野，竟收到真羽从”异世界“发来的简讯，随着调查展开，诡异的人事逐渐聚集在静野周围，他也在迷雾中越陷越深……
-DTSTAMP:20240327T040850Z
-SUMMARY:岚与山之彼端
-UID:5413
+DESCRIPTION:https://www.cngal.org/entries/index/4713\n鼎新工作室预计2024年发布的第一部视觉性小说，敬请期待！
+DTSTAMP:20240329T040851Z
+SUMMARY:向阳之爱
+UID:4713
 END:VEVENT
 END:VCALENDAR
