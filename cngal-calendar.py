@@ -226,17 +226,22 @@ def make_calendar(processed_results):
                 # Only show estimation message in above cases
                 description_suffix = f'\n发售日估算自 "{result["raw_date"]}"'
 
+        # Ensure release_date is a datetime object
+        if isinstance(release_date, str):
+            release_date = datetime.strptime(release_date, "%Y-%m-%d")
+
         # TODO: include more info
         event = Event(
             uid=index,
-            name=title,
+            summary=title,
             description=description + description_suffix,
             begin=release_date,
             last_modified=now,
+            dtstamp=now,
             categories=["cngal"],
         )
         event.make_all_day()
-        cal.events.add(event)
+        cal.events.append(event)
 
     with open(_OUTPUT_FOLDER + _ICS_FILE, "w", encoding="utf-8") as f:
         f.write(cal.serialize())
