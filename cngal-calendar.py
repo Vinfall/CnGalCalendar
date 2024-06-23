@@ -74,6 +74,9 @@ _TO_REPLACE_ISO = (
     (r"(\d+)年", r"\1"),  # 年
 )
 
+# Exclude outdated ID, not meant to be misused as personal blocklist
+_INDEX_FILTER = [2962]
+
 # Cli testing one-liner:
 # curl -X 'GET' 'https://api.cngal.org/api/home/ListUpcomingGames'  -H 'accept: application/json'
 
@@ -103,6 +106,11 @@ def process_json(results):
         # Extract index from url
         url = base_url + result["url"]
         index = re.search(r"index/(\d+)", url).group(1)
+
+        # Skip deprecated index
+        if int(index) in _INDEX_FILTER:
+            continue
+
         # Build new json
         processed_result = {
             "url": url,
