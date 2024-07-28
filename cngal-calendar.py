@@ -6,15 +6,15 @@
 # ICS: https://icspy.readthedocs.io/en/stable/api.html#event
 # Dateparser: https://dateparser.readthedocs.io/en/latest/settings.html#handling-incomplete-dates
 
-import os
-import sys
-import dateparser
-from datetime import datetime
-from datetime import timedelta
-import requests
-import json
 import csv
+import json
+import os
 import re
+import sys
+from datetime import datetime, timedelta
+
+import dateparser
+import requests
 from ics import Calendar, Event
 
 # Output files
@@ -87,7 +87,7 @@ def get_list():
     headers = {"Content-Type": "application/json"}
     url = api_url + api_upcoming
 
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, timeout=30)
 
     if response.status_code == 200:
         print("Post request successful")
@@ -189,7 +189,7 @@ def last_day_of_next_month(dt):
         next_next_month -= 12
         year = dt.year + 1
 
-    # Subtracting 1 day from the first day of the next next month, to get the last day of next month.
+    # Subtract 1 day from the first day of the next next month, to get the last day of next month.
     return datetime(year, next_next_month, 1) - timedelta(days=1)
 
 
@@ -229,7 +229,8 @@ def make_calendar(processed_results):
                 },
             )
             while release_date.date() < now.date():
-                # If the estimated release date has already passed, pick the earliest upcoming last-of-a-month date
+                # If the estimated release date has already passed,
+                # pick the earliest upcoming last-of-a-month date
                 release_date = last_day_of_next_month(release_date)
                 # Only show estimation message in above cases
                 description_suffix = f'\n发售日估算自 "{result["raw_date"]}"'
