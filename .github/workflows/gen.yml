@@ -15,15 +15,26 @@ jobs:
       matrix:
         python-version: ["3.12"]
     steps:
-      - name: Checkout repo
+      - name: checkout repo
         uses: actions/checkout@v4
 
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: install python packages
+      - name: get site-packages path
+        id: site_packages
+        run: echo "site_dir=$(python -c 'import site; print(site.getsitepackages()[0])')" > "$GITHUB_OUTPUT"
+
+      - name: cache installed packages
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.site_packages.outputs.site_dir }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: ${{ runner.os }}-pip-
+
+      - name: install dependencies
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
