@@ -1,4 +1,4 @@
-name: Generate calendar
+name: Build
 
 permissions:
   contents: write

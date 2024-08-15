@@ -1,5 +1,7 @@
 # CnGal Calendar
 
+[![Build](https://github.com/Vinfall/CnGalCalendar/actions/workflows/gen.yml/badge.svg)](https://github.com/Vinfall/CnGalCalendar/actions/workflows/gen.yml) [![Test](https://github.com/Vinfall/CnGalCalendar/actions/workflows/test.yml/badge.svg)](https://github.com/Vinfall/CnGalCalendar/actions/workflows/test.yml)
+
 ## 介绍
 
 这是一个创建 [CnGal](https://www.cngal.org) 游戏发售日历的小工具，由 GitHub Actions 定期更新。你可以[点击这里](https://github.com/Vinfall/CnGalCalendar/raw/main/output/cngal-calendar.ics)获取订阅地址，并在任意支持 iCalendar 的日历应用中订阅。
