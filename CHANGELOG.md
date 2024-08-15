@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.5.2] - 2024-08-15
+
+### 🎨 Styling
+
+- Lint
+
+### 🛠️ Chores
+
+- Add ci badge
+- Ignore test on docs change
+- Cache installed packages
+- Update changelog
+
 ## [2.4.1] - 2024-08-11
 
 ### 🐛 Fixes
