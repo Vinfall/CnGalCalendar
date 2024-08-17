@@ -171,7 +171,7 @@ def process_json(results):
 
 
 # Function borrowed from SteamWishlistCalendar
-# https://github.com/icue/SteamWishlistCalendar/blob/b5995dd44e8a0e682e80962277bc905eed744768/swc.py#L33-L51
+# https://github.com/icue/SteamWishlistCalendar/blob/166cc44fec28b01771ac39def0a340940d2a5bf3/swc.py#L34-L52
 def last_day_of_next_month(dt):
     """
     Returns the datetime of the last day of the next month.
