@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.7.1] - 2024-10-09
+
+### 🐛 Fixes
+
+- Date parse error caused by index/5642
+
+### 📦 Dependencies
+
+- Bump Python Matrix to 3.11~3.13 as per PEP 719
+
+### 🛠️ Chores
+
+- Allow manual test
+- Use unique cache key
+- Add pypy3.10 to Python Matrix
+- Update ref
+- Update changelog
+
 ## [2.5.2] - 2024-08-15
 
 ### 🎨 Styling
@@ -54,7 +72,6 @@ All notable changes to this project will be documented in this file.
 - Feat: add index filter
 This is added to exclude outdated ID, not meant to be misused as
 personal blocklist
-
 
 ### 📚 Docs
 
