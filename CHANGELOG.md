@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.8.1] - 2024-11-03
+
+### 🐛 Fixes
+
+- Date parse error caused by index/5835
+- Fix pypy -mpip install
+
+### 🛠️ Chores
+
+- Update changelog
+
 ## [2.7.1] - 2024-10-09
 
 ### 🐛 Fixes
