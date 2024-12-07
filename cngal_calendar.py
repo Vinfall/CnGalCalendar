@@ -261,5 +261,5 @@ def make_calendar(processed_results):
 
 os.makedirs(_OUTPUT_FOLDER, exist_ok=True)
 j = get_list()
-results = process_json(j)
-make_calendar(results)
+events = process_json(j)
+make_calendar(events)
