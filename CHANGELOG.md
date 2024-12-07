@@ -2,16 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.8.3] - 2024-12-07
+
+### 📚 Docs
+
+- Silent changelog update
+
+## [2.8.2] - 2024-11-08
+
+### 🐛 Fixes
+
+- Regex syntax
+
 ## [2.8.1] - 2024-11-03
 
 ### 🐛 Fixes
 
 - Date parse error caused by index/5835
 - Fix pypy -mpip install
-
-### 🛠️ Chores
-
-- Update changelog
 
 ## [2.7.1] - 2024-10-09
 
@@ -29,7 +37,6 @@ All notable changes to this project will be documented in this file.
 - Use unique cache key
 - Add pypy3.10 to Python Matrix
 - Update ref
-- Update changelog
 
 ## [2.5.2] - 2024-08-15
 
@@ -42,7 +49,6 @@ All notable changes to this project will be documented in this file.
 - Add ci badge
 - Ignore test on docs change
 - Cache installed packages
-- Update changelog
 
 ## [2.4.1] - 2024-08-11
 
