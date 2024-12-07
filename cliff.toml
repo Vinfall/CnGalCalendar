@@ -78,6 +78,7 @@ commit_parsers = [
   { message = "^build/deps|^ci: bump", group = "<!-- 4 -->📦 Dependencies" },
   { message = "^chore/pr", skip = true },
   { message = "^chore/pull", skip = true },
+  { message = "^chore: update changelog", skip = true },
   { message = "^chore|^ci|^build|^git|^py", group = "<!-- 7 -->🛠️ Chores" },
   # silent ics update
   { message = "^ics: update release calendar", group = "<!-- 7 -->🛠️ Chores", skip = true },
