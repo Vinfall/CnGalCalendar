@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.11.0] - 2024-12-07
+
+### 🚀 Features
+
+- Add pyproject.toml
+
+### 📦 Dependencies
+
+- Bump default python version to 3.13
+
+### 🎨 Styling
+
+- Lint
+
 ## [2.8.3] - 2024-12-07
 
 ### 📚 Docs
