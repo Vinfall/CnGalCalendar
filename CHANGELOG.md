@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.11.2] - 2024-12-29
+
+### 🐛 Fixes
+
+- Break too aggressively
+- Handle empty response
+
+### 🛠️ Chores
+
+- Temp block index/5584
+
 ## [2.11.0] - 2024-12-07
 
 ### 🚀 Features
