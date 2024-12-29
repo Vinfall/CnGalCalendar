@@ -144,8 +144,6 @@ def process_json(results):
                 processed_result["released"] = (
                     f"{date_parts[0]}-{date_parts[1]:0>2}-{date_parts[2]:0>2}"
                 )
-        else:
-            break
 
         # Ignore release without valid date
         if processed_result["released"]:
