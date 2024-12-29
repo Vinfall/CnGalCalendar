@@ -87,16 +87,19 @@ _INDEX_FILTER = [2962]
 def get_list():
     api_url = "https://api.cngal.org"
     api_upcoming = "/api/home/ListUpcomingGames"
-    headers = {"Content-Type": "application/json"}
+    headers = {"Content-Type": "application/json; charset=utf-8"}
     url = api_url + api_upcoming
 
     response = requests.get(url, headers=headers, timeout=30)
 
     if response.status_code == 200:
-        print("Post request successful")
+        print("Request successful")
+        if response.text is None:
+            print("Empty response")
+            sys.exit()
         return response.json()
     else:
-        print("Post request failed")
+        print("Request failed")
         print(response)
         sys.exit()
 
