@@ -14,7 +14,7 @@ CnGal 没有提供最近发售游戏的 RSS，这是个人使用的替代方案�
 
 - [x] 优化发售日处理，添加估算提示
 - [ ] 通过 `/api/entries/GetPublishGamesTimeline` 或 `/api/entries/GetPublishGamesByTime` 生成已发售游戏日历（数据结构不一样，需要重构部分代码）
-- [ ] 通过 `/api/entries/GetRoleBirthdaysByTime` 生成[角色生日日历](https://www.cngal.org/birthday)（单独文件，不确定是否需要定期更新🤔）
+- [ ] 通过 `/api/entries/GetRoleBirthdaysByTime` 生成[角色生日日历](https://www.cngal.org/birthday)
 
 ## 致谢
 
