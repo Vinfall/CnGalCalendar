@@ -16,7 +16,6 @@ classifiers = [
     "Topic :: File Formats",
     "Private :: Do Not Upload",
 ]
-dependencies = ["dateparser>=1.2.0", "requests>=2.32.3", "ics==0.8.0.dev0"]
 
 [project.urls]
 homepage = "https://github.com/Vinfall/CnGalCalendar"
