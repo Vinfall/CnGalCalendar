@@ -35,14 +35,14 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ steps.site_packages.outputs.site_dir }}
-          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('**/requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('**/pyproject.toml') }}
           restore-keys: ${{ runner.os }}-pip-
 
       - name: install dependencies
         run: |
           if command -v pypy > /dev/null; then py=pypy; else py=python; fi
           ${py} -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install .
 
       - name: execute py script
         run: python cngal_calendar.py
