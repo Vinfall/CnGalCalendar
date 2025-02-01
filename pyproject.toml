@@ -1,6 +1,6 @@
 [project]
 name = "CnGalCalendar"
-dynamic = ["version"]
+version = "2.11.4"
 description = "CnGal 游戏发售日历"
 keywords = ["calendar", "cngal", "cngal-api", "galgame", "game", "visualnovel", "ics", "icalendar"]
 requires-python = ">=3.12"
@@ -15,6 +15,7 @@ classifiers = [
     "Topic :: File Formats",
     "Private :: Do Not Upload",
 ]
+dependencies = ["dateparser>=1.2.0", "requests>=2.32.3", "ics==0.8.0.dev0"]
 
 [project.urls]
 homepage = "https://github.com/Vinfall/CnGalCalendar"
