@@ -6,8 +6,7 @@ keywords = ["calendar", "cngal", "cngal-api", "galgame", "game", "visualnovel", 
 requires-python = ">=3.12"
 authors = [{ name = "Vinfall" }]
 readme = { file = "README.md", content-type = "text/markdown" }
-license = "BSD-3-Clause"
-license-files = ["LICENSE"]
+license = { file = "LICENSE" }
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: BSD License",
