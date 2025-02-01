@@ -22,27 +22,23 @@ jobs:
         python-version: [pypy3.10, "3.11", "3.12", "3.13"]
     steps:
       - uses: actions/checkout@v4
-      - name: set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5
+
+      - name: setup Python with uv
+        id: setup-uv
+        uses: astral-sh/setup-uv@v5
         with:
+          version: latest
           python-version: ${{ matrix.python-version }}
+          enable-cache: true
+          ignore-nothing-to-cache: true
+          cache-dependency-glob: "**/pyproject.toml"
 
-      - name: get site-packages path
-        id: site_packages
-        run: echo "site_dir=$(python -c 'import site; print(site.getsitepackages()[0])')" > "$GITHUB_OUTPUT"
-
-      - name: cache installed packages
-        uses: actions/cache@v4
-        with:
-          path: ${{ steps.site_packages.outputs.site_dir }}
-          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('**/pyproject.toml') }}
-          restore-keys: ${{ runner.os }}-pip-
+      - name: hint on cache hit
+        if: steps.setup-uv.outputs.cache-hit == 'true'
+        run: echo "Hit cache"
 
       - name: install dependencies
-        run: |
-          if command -v pypy > /dev/null; then py=pypy; else py=python; fi
-          ${py} -m pip install --upgrade pip
-          pip install .
+        run: uv pip install .
 
       - name: execute py script
         run: python cngal_calendar.py
