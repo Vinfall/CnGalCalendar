@@ -4,7 +4,7 @@
 [bump]
 features_always_bump_minor = true
 breaking_always_bump_major = true
-initial_tag                = "1.0.0"
+initial_tag = "1.0.0"
 # custom_major_increment_regex = "major"
 # custom_minor_increment_regex = "minor|more"
 
@@ -78,7 +78,7 @@ commit_parsers = [
   { message = "^build/deps|^ci: bump", group = "<!-- 4 -->📦 Dependencies" },
   { message = "^chore/pr", skip = true },
   { message = "^chore/pull", skip = true },
-  { message = "^chore: update changelog", skip = true },
+  { message = "^chore: update changelog|^chore: bump to", skip = true },
   { message = "^chore|^ci|^build|^git|^py", group = "<!-- 7 -->🛠️ Chores" },
   # silent ics update
   { message = "^ics: update release calendar", group = "<!-- 7 -->🛠️ Chores", skip = true },
