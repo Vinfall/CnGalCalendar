@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.11.3] - 2025-02-01
+
+### 🐛 Fixes
+
+- Metadata
+
+### 📚 Docs
+
+- More keywords in pyproject.toml
+- Update todo
+
+### 📦 Dependencies
+
+- Migrate to uv
+- Add deps to pyproject.toml
+
+### 🛠️ Chores
+
+- Mute version bump in changelog
+- Update metadata in pyproject.toml
+
 ## [2.11.2] - 2024-12-29
 
 ### 🐛 Fixes
