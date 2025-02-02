@@ -30,6 +30,7 @@ jobs:
           version: latest
           python-version: ${{ matrix.python-version }}
           enable-cache: true
+          prune-cache: false # do not remove pre-built wheels
           ignore-nothing-to-cache: true
           cache-dependency-glob: "**/pyproject.toml"
 
