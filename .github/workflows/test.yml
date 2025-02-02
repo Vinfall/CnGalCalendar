@@ -38,8 +38,4 @@ jobs:
         if: steps.setup-uv.outputs.cache-hit == 'true'
         run: echo "Hit cache"
 
-      - name: install dependencies
-        run: uv pip install .
-
-      - name: execute py script
-        run: python cngal_calendar.py
+      - run: uv run cngal_calendar.py
