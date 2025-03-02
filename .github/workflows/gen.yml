@@ -20,20 +20,15 @@ jobs:
         with:
           persist-credentials: true
 
-      - name: setup Python with uv
-        id: setup-uv
-        uses: astral-sh/setup-uv@v5
+      - name: setup project with mise
+        id: setup-mise
+        uses: jdx/mise-action@v2
         with:
-          version: latest
-          python-version: ${{ matrix.python-version }}
-          enable-cache: true
-          prune-cache: false # do not remove pre-built wheels
-          ignore-nothing-to-cache: true
-          cache-dependency-glob: "**/pyproject.toml"
-
-      - name: hint on cache hit
-        if: steps.setup-uv.outputs.cache-hit == 'true'
-        run: echo "Hit cache"
+          install: true
+          cache: true
+          tool_versions: |
+            python ${{ matrix.python-version }}
+            uv latest
 
       - run: uv run cngal_calendar.py
 
@@ -46,7 +41,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add -A
+          git add -u
           git commit -m "ics: update release calendar" -a
 
       - name: push changes
