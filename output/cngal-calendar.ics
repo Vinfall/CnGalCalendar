@@ -2,85 +2,62 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:CnGalCalendar
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20250304
-DTEND;VALUE=DATE:20250305
-SUMMARY:浮生游歌
-UID:5177
-DESCRIPTION:https://www.cngal.org/entries/index/5177\n卡牌剧情冒险游戏。瘟疫之下，无人能够独善其
- 身。灾荒、战争致使饿殍遍野，血流成河。您将扮演华佗、张仲景、董奉三名神医，借助手术、药剂，甚至神明之力，来结束这悲惨的乱世，并溯源一切的开始，揭开世
- 界的真相，消灭这一切的罪魁祸首。
-LAST-MODIFIED:20250223T181840Z
-DTSTAMP:20250223T181840Z
-CATEGORIES:cngal
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20250228
-DTEND;VALUE=DATE:20250301
-SUMMARY:天狐札记
-UID:3379
-DESCRIPTION:https://www.cngal.org/entries/index/3379\n一个坚定的唯物主义少年亲眼目睹了怪力乱神的
- 神怪精灵之后，他的世界观会产生怎样的动摇呢。高高在上的九尾神狐，嬉笑打闹的同班同学，梦境中的神秘少女，你想和她们中的哪一位展开一段惊心动魄的刺激的冒
- 险呢？
-LAST-MODIFIED:20250223T181840Z
-DTSTAMP:20250223T181840Z
-CATEGORIES:cngal
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20250228
-DTEND;VALUE=DATE:20250301
-SUMMARY:银雀：十三月的爱恋
-UID:5204
-DESCRIPTION:https://www.cngal.org/entries/index/5204\n高考失利的学生白鸿，怀揣着忧虑和决绝来到高
- 考名城黄州【复读】，一次偶然突兀的初遇，一场命中注定的重逢。放飞纸铸墨笼中的银雀，捧起梦茧愿蛹中的褐蝶。这是一个关于高考【复读】的故事，也是迷惘的男
- 孩女孩相互温暖成长的故事，如果您能在其中拾得或多或少的感动，对我们便是最好的嘉奖。
-LAST-MODIFIED:20250223T181840Z
-DTSTAMP:20250223T181840Z
-CATEGORIES:cngal
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20250331
-DTEND;VALUE=DATE:20250401
+DTSTART;VALUE=DATE:20250321
+DTEND;VALUE=DATE:20250322
 SUMMARY:神树残响
 UID:5480
 DESCRIPTION:https://www.cngal.org/entries/index/5480\n“心怀信念而战吧。” 这是一款王道向百合卡
  牌RPG。构筑牌组、发掘奇物、炼成装备，竭尽所能变强，战胜各路怪异，去扭转神树子赫卡特的命运吧。
-LAST-MODIFIED:20250223T181840Z
-DTSTAMP:20250223T181840Z
+LAST-MODIFIED:20250313T182222Z
+DTSTAMP:20250313T182222Z
 CATEGORIES:cngal
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20250331
 DTEND;VALUE=DATE:20250401
-SUMMARY:MIRAGE Episode：1
-UID:5733
-DESCRIPTION:https://www.cngal.org/entries/index/5733\n“如果有再来一次的机会，你会怎么选择？”7
- 月的神奈川县和匙风市野回岛，主人公逢坂礼瑜因为作家的工作不得不回到阔别数年的城市。在机缘巧合下与自己曾经差点交往的女孩桂木碧相遇。在礼瑜帮助碧的生活
- 回到正轨后，不料这一切被礼瑜的女朋友绘羽琉艾莉撞见，接下来的故事会怎么发展呢......
-LAST-MODIFIED:20250223T181840Z
-DTSTAMP:20250223T181840Z
+SUMMARY:天狐札记
+UID:3379
+DESCRIPTION:https://www.cngal.org/entries/index/3379\n一个坚定的唯物主义少年亲眼目睹了怪力乱神的
+ 神怪精灵之后，他的世界观会产生怎样的动摇呢。高高在上的九尾神狐，嬉笑打闹的同班同学，梦境中的神秘少女，你想和她们中的哪一位展开一段惊心动魄的刺激的冒
+ 险呢？\n发售日估算自 "2025年第一季度"
+LAST-MODIFIED:20250313T182222Z
+DTSTAMP:20250313T182222Z
 CATEGORIES:cngal
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20250228
-DTEND;VALUE=DATE:20250301
+DTSTART;VALUE=DATE:20250331
+DTEND;VALUE=DATE:20250401
+SUMMARY:银雀：十三月的爱恋
+UID:5204
+DESCRIPTION:https://www.cngal.org/entries/index/5204\n高考失利的学生白鸿，怀揣着忧虑和决绝来到高
+ 考名城黄州【复读】，一次偶然突兀的初遇，一场命中注定的重逢。放飞纸铸墨笼中的银雀，捧起梦茧愿蛹中的褐蝶。这是一个关于高考【复读】的故事，也是迷惘的男
+ 孩女孩相互温暖成长的故事，如果您能在其中拾得或多或少的感动，对我们便是最好的嘉奖。\n发售日估算自 "2025年第一季度"
+LAST-MODIFIED:20250313T182222Z
+DTSTAMP:20250313T182222Z
+CATEGORIES:cngal
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20250331
+DTEND;VALUE=DATE:20250401
 SUMMARY:泡芙爱情故事
 UID:5869
 DESCRIPTION:https://www.cngal.org/entries/index/5869\n轻松愉快的短篇恋爱AVG！男主角阿逅是个烘
- 焙师傅，他刚经历事业爱情的双重打击一蹶不振。就在此时，一位爱吃泡芙的女孩出现在他的面前，这段吃泡芙、做泡芙的恋爱故事就此开始！
-LAST-MODIFIED:20250223T181840Z
-DTSTAMP:20250223T181840Z
+ 焙师傅，他刚经历事业爱情的双重打击一蹶不振。就在此时，一位爱吃泡芙的女孩出现在他的面前，这段吃泡芙、做泡芙的恋爱故事就此开始！\n发售日估算自 
+ "2025年第一季度"
+LAST-MODIFIED:20250313T182222Z
+DTSTAMP:20250313T182222Z
 CATEGORIES:cngal
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20250228
-DTEND;VALUE=DATE:20250301
+DTSTART;VALUE=DATE:20250331
+DTEND;VALUE=DATE:20250401
 SUMMARY:翎之歌
 UID:5892
 DESCRIPTION:https://www.cngal.org/entries/index/5892\n《翎之歌》是一款深度沉浸的末日生存向文字冒
  险类游戏，在这个被末日阴影笼罩的世界里，曾经繁荣传奇的人类文明如今只剩下残破的记忆，散布在无尽的废墟之中，玩家将会扮演世界上最后一位人类在这片绝望的
- 土地之中寻找生存的意义与重建文明的契机。
-LAST-MODIFIED:20250223T181840Z
-DTSTAMP:20250223T181840Z
+ 土地之中寻找生存的意义与重建文明的契机。\n发售日估算自 "2025年第一季度"
+LAST-MODIFIED:20250313T182222Z
+DTSTAMP:20250313T182222Z
 CATEGORIES:cngal
 END:VEVENT
 BEGIN:VEVENT
@@ -90,8 +67,20 @@ SUMMARY:赝作 次元契约
 UID:5597
 DESCRIPTION:https://www.cngal.org/entries/index/5597\n这是真冬工作室开发制作的第一部AVG游戏。
  你将在徽市的校园中，与各位少女邂逅，体验青春恋爱喜剧，并随着日常生活中的种种事件，逐渐探寻出这个世界最真实的一面。
-LAST-MODIFIED:20250223T181840Z
-DTSTAMP:20250223T181840Z
+LAST-MODIFIED:20250313T182222Z
+DTSTAMP:20250313T182222Z
+CATEGORIES:cngal
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20250430
+DTEND;VALUE=DATE:20250501
+SUMMARY:书恋与君：美少女教我追系花
+UID:5488
+DESCRIPTION:https://www.cngal.org/entries/index/5488\n这是一个甜蜜，青涩，酸苦的校园恋爱故事。大
+ 二刚开学，魏明诚终于鼓起勇气向系花江雪表白，结果却是被拒绝了。正在他伤心失落之际，在他面前突然出现一位打扮奇特又可爱的女生，自称是仙子，要教魏明诚怎
+ 么追女生。这场从心碎开始的旅途，会走向怎样的结局呢？
+LAST-MODIFIED:20250313T182222Z
+DTSTAMP:20250313T182222Z
 CATEGORIES:cngal
 END:VEVENT
 BEGIN:VEVENT
@@ -101,8 +90,31 @@ SUMMARY:恋爱猪脚饭
 UID:5848
 DESCRIPTION:https://www.cngal.org/entries/index/5848\n"猪脚饭与工地恋爱喜剧！”——玩家将扮演负
  债累累流落城中村的破产老哥“黄夏”，与爱吃猪脚饭的女神施工员“陈嘉怡”邂逅开启工地逆袭人生。通过在游戏中做出选择，达成不同的故事结局。
-LAST-MODIFIED:20250223T181840Z
-DTSTAMP:20250223T181840Z
+LAST-MODIFIED:20250313T182222Z
+DTSTAMP:20250313T182222Z
+CATEGORIES:cngal
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20250520
+DTEND;VALUE=DATE:20250521
+SUMMARY:我亲爱的妹妹
+UID:5718
+DESCRIPTION:https://www.cngal.org/entries/index/5718\n《我亲爱的妹妹HappySistersLi
+ fe》是一款视觉小说游戏。玩家将扮演名为见藤亚丹树的青年男性，走入他的日常生活，并与身边的家人，同学，朋友等产生独特的联系。因父母再婚带来的新妹妹，
+ 自己的双胞胎妹妹，和隔壁班偶遇的少女——她们究竟会与主角产生什么样的羁绊？通过点击阅读推进剧情，了解属于他们的故事，收获亲情与友情的美好。
+LAST-MODIFIED:20250313T182222Z
+DTSTAMP:20250313T182222Z
+CATEGORIES:cngal
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20250531
+DTEND;VALUE=DATE:20250601
+SUMMARY:残神觉醒
+UID:3926
+DESCRIPTION:https://www.cngal.org/entries/index/3926\n《残神觉醒-
+ BROKENGodAwakening》是一部现代都市背景异能题材Galgame
+LAST-MODIFIED:20250313T182222Z
+DTSTAMP:20250313T182222Z
 CATEGORIES:cngal
 END:VEVENT
 BEGIN:VEVENT
@@ -113,8 +125,8 @@ UID:4848
 DESCRIPTION:https://www.cngal.org/entries/index/4848\n一名离职原画师，驾驶着豪车的网约车司机江芊
  华；外表单纯可爱，自称辣妹可爱却粘人，为了追上芊华不顾一切的少女南绣玉。围绕着VTB“紫阳”，一个美丽动人，正如盛放的绣球花般的恋爱故事即将展开。以
  视觉小说方式呈现的多个结局，描绘极致的百合恋爱，欢迎来到热烈的7月——
-LAST-MODIFIED:20250223T181840Z
-DTSTAMP:20250223T181840Z
+LAST-MODIFIED:20250313T182222Z
+DTSTAMP:20250313T182222Z
 CATEGORIES:cngal
 END:VEVENT
 BEGIN:VEVENT
@@ -122,13 +134,12 @@ DTSTART;VALUE=DATE:20250630
 DTEND;VALUE=DATE:20250701
 SUMMARY:MagicSweets-给予幸福的魔法糖果-
 UID:5429
-DESCRIPTION:https://www.cngal.org/entries/index/5429\n你幸福吗？\n\n如果不幸福的话，那就在虚
- 假的梦中死去吧。\n\n神明对这个世界降下了诅咒，但只要成人前寻得凝结着自己幸福回忆的糖果，你就会平安无事。\n\n倘若没有一点幸福回忆，那么秋山学
- 园离忆部即刻出发。\n\n“但这次有点不同。”\n\n辅导老师望着刚被魔法弄的乱七八糟的活动室里捧着零食闲聊的部员。\n\n“我们要记录临终记忆的人
- ，是岚满的姐姐，望和遥。”\n\n“如果三天后她没有找到属于她的那颗糖果，我们就陪她度过最后的时光吧。”\n\n于是寻找幸福回忆的作战开始了！\n\
- n但对离忆部部长长岚满从未想到，他需要解决的不仅是青梅竹马和遥的问题，更是他周围的一切......
-LAST-MODIFIED:20250223T181840Z
-DTSTAMP:20250223T181840Z
+DESCRIPTION:https://www.cngal.org/entries/index/5429\n在我们的小岛上，延续着这样的一个诅咒。\n
+ 孩子们需要在二十岁生日到来之前找到属于自己的“魔法糖果”，否则在时针与分针重叠着指向十二的那一刻，就会沉溺在短暂的幻象中，失去最后的气息…\n而找到
+ “魔法糖果”的唯一方法，就是找到属于自己的幸福。所以…「你觉得什么是幸福？」「对你来说，什么是幸福呢？」……\n迟迟寻找不到糖果的学生们组成的「追忆
+ 部」，在最后幻象之前探寻少女们真实的愿景，与神秘诅咒的真身……
+LAST-MODIFIED:20250313T182222Z
+DTSTAMP:20250313T182222Z
 CATEGORIES:cngal
 END:VEVENT
 BEGIN:VEVENT
@@ -138,8 +149,8 @@ SUMMARY:Alice's World
 UID:5570
 DESCRIPTION:https://www.cngal.org/entries/index/5570\n《Alice'sWorld》是一款2D冒险
  解谜叙事游戏。荒凉的废墟、空无一人的城市，在这充满死亡的世界中，少女艾丽斯听到屏幕前“你”的声音。你必须引导她前进，解开谜团抵达塔的顶端。
-LAST-MODIFIED:20250223T181840Z
-DTSTAMP:20250223T181840Z
+LAST-MODIFIED:20250313T182222Z
+DTSTAMP:20250313T182222Z
 CATEGORIES:cngal
 END:VEVENT
 BEGIN:VEVENT
@@ -149,42 +160,32 @@ SUMMARY:缚戎人：唐建中十三年
 UID:5780
 DESCRIPTION:https://www.cngal.org/entries/index/5780\n中唐历史群像文字冒险游戏，玩家将随着“缚戎
  人”的讲述体验建中十三年时唐蕃战争下西域一座孤城中的风云故事。见证人物的成长无奈和时代的兴衰。
-LAST-MODIFIED:20250223T181840Z
-DTSTAMP:20250223T181840Z
+LAST-MODIFIED:20250313T182222Z
+DTSTAMP:20250313T182222Z
+CATEGORIES:cngal
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20250831
+DTEND;VALUE=DATE:20250901
+SUMMARY:柔蒂亚克：永眠之城
+UID:5931
+DESCRIPTION:https://www.cngal.org/entries/index/5931\n因为太过理所当然，人们忘记了睡眠是最接近于
+ 死亡的形式。当苏醒成为奢侈时，清醒着的人们获得的是幸运还是绝望呢？在人工智能的操控下，城市里的人们都陷入了无法苏醒的梦境。你在死寂的城市里睁开了眼，
+ 骤然的巨变袭来，可世界朝你开的玩笑不止一个，很快你落入了一场追杀游戏，狼狈的穿梭在熟悉的街道间，就在你快要放弃时，一个陌生的少女出现在了你的眼前..
+ ..
+LAST-MODIFIED:20250313T182222Z
+DTSTAMP:20250313T182222Z
 CATEGORIES:cngal
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-SUMMARY:连海台球俱乐部
-UID:246
-DESCRIPTION:https://www.cngal.org/entries/index/246\n“连海台球俱乐部”是一款融合青春恋爱与台球休
- 闲两种元素的游戏，讲述了孤独的男主角从一名放荡不羁的不良少年，在伙伴们的陪伴下逐渐成长为一颗闪耀的职业台球新星的故事。
-LAST-MODIFIED:20250223T181840Z
-DTSTAMP:20250223T181840Z
-CATEGORIES:cngal
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20251231
-DTEND;VALUE=DATE:20260101
-SUMMARY:马戏团之夜
-UID:253
-DESCRIPTION:https://www.cngal.org/entries/index/253\n《马戏团之夜》是一款横版2D的剧情向解谜游戏
- ，旨在讲述一场关于“爱与现实”的童话故事。
-LAST-MODIFIED:20250223T181840Z
-DTSTAMP:20250223T181840Z
-CATEGORIES:cngal
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20251231
-DTEND;VALUE=DATE:20260101
-SUMMARY:濒临少女们的求婚大作战
-UID:3356
-DESCRIPTION:https://www.cngal.org/entries/index/3356\n落入异世界的少女被迫参加一场为期十六天的相
- 亲大会，只要(被)追求成功就立刻结婚。作为一个三观正常的人类，认为这是愚蠢的综艺节目也是理所当然。于是，开始了带着满腔怒火去探索的每一天。「嘴硬心软
- 的普通大学生X不知所云的异世界怪人们」新感觉恋爱不养成百合游戏，等着各位亲自体验。
-LAST-MODIFIED:20250223T181840Z
-DTSTAMP:20250223T181840Z
+SUMMARY:维罗瓦年代记：绯红之狼
+UID:3975
+DESCRIPTION:https://www.cngal.org/entries/index/3975\n《维罗瓦年代记：绯红之狼》是一款文字冒险游
+ 戏，你将会跟随维罗瓦帝国学院的教师——朔尔的视点，以魔法学院为舞台，卷入这个牵扯到国家多个势力的政治旋涡以及私人恩怨。
+LAST-MODIFIED:20250313T182222Z
+DTSTAMP:20250313T182222Z
 CATEGORIES:cngal
 END:VEVENT
 END:VCALENDAR
