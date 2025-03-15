@@ -198,7 +198,7 @@ def last_day_of_next_month(dt: datetime) -> datetime:
 
 
 # Make calendar
-def make_calendar(processed_results: dict(str, Any)) -> None:
+def make_calendar(processed_results: dict[str, Any]) -> None:
     cal = Calendar(creator="CnGalCalendar")
     now = datetime.now()  # noqa: DTZ005
 
