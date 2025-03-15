@@ -23,6 +23,28 @@ source = "https://github.com/Vinfall/CnGalCalendar"
 issues = "https://github.com/Vinfall/CnGalCalendar/issues"
 changelog = "https://github.com/Vinfall/CnGalCalendar/blob/main/CHANGELOG.md"
 
-# Linter
 [tool.pylint]
-disable = ["missing-module-docstring", "missing-function-docstring", "no-else-return"]
+disable = ["fixme", "import-error", "missing-module-docstring", "missing-function-docstring", "no-else-return"]
+
+[tool.ruff]
+# force-exclude = true
+unsafe-fixes = true
+
+# https://docs.astral.sh/ruff/rules/
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "E501", # EditorConfig
+    "COM", # commas
+    "D1", # docstring
+    "D212",
+    "ERA", # commented-out-code
+    "FIX", # fixme
+    "TD002", # todo
+    "TD003",
+    "PLR2004", # magic-value-comparison
+    "PTH", # flake8-use-pathlib: slower than os
+    "RET505", # superfluous-else-return
+    "T20", # print
+]
+# unfixable = ["F401"]

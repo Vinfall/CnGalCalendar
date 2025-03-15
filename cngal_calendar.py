@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 # Documentation
 # CnGal: https://api.cngal.org/swagger/index.html
@@ -12,6 +11,7 @@ import os
 import re
 import sys
 from datetime import datetime, timedelta
+from typing import Any
 
 import dateparser
 import requests
@@ -84,7 +84,7 @@ _INDEX_FILTER = [2962, 5584]
 # curl -X 'GET' 'https://api.cngal.org/api/home/ListUpcomingGames'  -H 'accept: application/json'
 
 
-def get_list():
+def get_list() -> dict:
     api_url = "https://api.cngal.org"
     api_upcoming = "/api/home/ListUpcomingGames"
     headers = {"Content-Type": "application/json; charset=utf-8"}
@@ -94,7 +94,7 @@ def get_list():
 
     if response.status_code == 200:
         print("Request successful")
-        if response.text is None:
+        if response.text == "":
             print("Empty response")
             sys.exit()
         return response.json()
@@ -105,7 +105,7 @@ def get_list():
 
 
 # Process & Write results to JSON & CSV
-def process_json(results):
+def process_json(results: dict[str, Any]) -> dict[str, Any]:
     base_url = "https://www.cngal.org/"
     processed_results = []
     for result in results:
@@ -176,17 +176,17 @@ def process_json(results):
 
 # Function borrowed from SteamWishlistCalendar
 # https://github.com/icue/SteamWishlistCalendar/blob/166cc44fec28b01771ac39def0a340940d2a5bf3/swc.py#L34-L52
-def last_day_of_next_month(dt):
+def last_day_of_next_month(dt: datetime) -> datetime:
     """
-    Returns the datetime of the last day of the next month.
+    Return the datetime of the last day of the next month.
 
     Args:
     dt: A datetime.datetime object.
 
     Returns:
     A datetime.datetime object.
-    """
 
+    """
     year = dt.year
     next_next_month = dt.month + 2
     if next_next_month > 12:
@@ -194,13 +194,13 @@ def last_day_of_next_month(dt):
         year = dt.year + 1
 
     # Subtract 1 day from the first day of the next next month, to get the last day of next month.
-    return datetime(year, next_next_month, 1) - timedelta(days=1)
+    return datetime(year, next_next_month, 1) - timedelta(days=1)  # noqa: DTZ001
 
 
 # Make calendar
-def make_calendar(processed_results):
+def make_calendar(processed_results: dict(str, Any)) -> None:
     cal = Calendar(creator="CnGalCalendar")
-    now = datetime.now()
+    now = datetime.now()  # noqa: DTZ005
 
     for result in processed_results:
         description_suffix = ""
@@ -215,7 +215,9 @@ def make_calendar(processed_results):
         if year_only_match:
             year = year_only_match.group(1)
             # If Sep 15 of this year passed, use the end of year
-            mid_release_date = datetime.strptime(year + _MID_YEAR, "%Y-%m-%d").date()
+            mid_release_date = datetime.strptime(  # noqa: DTZ007
+                year + _MID_YEAR, "%Y-%m-%d"
+            ).date()
             release_date = year + (
                 _MID_YEAR if mid_release_date > now.date() else "-12-31"
             )
@@ -241,7 +243,7 @@ def make_calendar(processed_results):
 
         # Ensure release_date is a datetime object
         if isinstance(release_date, str):
-            release_date = datetime.strptime(release_date, "%Y-%m-%d")
+            release_date = datetime.strptime(release_date, "%Y-%m-%d")  # noqa: DTZ007
 
         # TODO: include more info
         event = Event(
