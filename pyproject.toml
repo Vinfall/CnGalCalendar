@@ -23,9 +23,6 @@ source = "https://github.com/Vinfall/CnGalCalendar"
 issues = "https://github.com/Vinfall/CnGalCalendar/issues"
 changelog = "https://github.com/Vinfall/CnGalCalendar/blob/main/CHANGELOG.md"
 
-[tool.pylint]
-disable = ["fixme", "import-error", "missing-module-docstring", "missing-function-docstring", "no-else-return"]
-
 [tool.ruff]
 # force-exclude = true
 unsafe-fixes = true
