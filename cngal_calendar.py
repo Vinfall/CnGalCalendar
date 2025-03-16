@@ -78,13 +78,13 @@ _TO_REPLACE_ISO = (
 )
 
 # Exclude outdated ID, not meant to be misused as personal blocklist
-_INDEX_FILTER = [2962, 5584]
+_INDEX_FILTER = [0, 2962, 5584]
 
 # Cli testing one-liner:
 # curl -X 'GET' 'https://api.cngal.org/api/home/ListUpcomingGames'  -H 'accept: application/json'
 
 
-def get_list() -> dict:
+def get_list() -> list[dict[str, Any]]:
     api_url = "https://api.cngal.org"
     api_upcoming = "/api/home/ListUpcomingGames"
     headers = {"Content-Type": "application/json; charset=utf-8"}
@@ -105,13 +105,13 @@ def get_list() -> dict:
 
 
 # Process & Write results to JSON & CSV
-def process_json(results: dict[str, Any]) -> dict[str, Any]:
+def process_json(results: list[dict[str, Any]]) -> list[dict[str, Any]]:
     base_url = "https://www.cngal.org/"
     processed_results = []
     for result in results:
         # Extract index from url
         url = base_url + result["url"]
-        index = re.search(r"index/(\d+)", url).group(1)
+        index = match.group(1) if (match := re.search(r"index/(\d+)", url)) else 0
 
         # Skip deprecated index
         if int(index) in _INDEX_FILTER:
@@ -198,7 +198,7 @@ def last_day_of_next_month(dt: datetime) -> datetime:
 
 
 # Make calendar
-def make_calendar(processed_results: dict[str, Any]) -> None:
+def make_calendar(processed_results: list[dict[str, Any]]) -> None:
     cal = Calendar(creator="CnGalCalendar")
     now = datetime.now()  # noqa: DTZ005
 

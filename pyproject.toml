@@ -35,6 +35,7 @@ ignore = [
     "COM", # commas
     "D1", # docstring
     "D212",
+    "D203", # prefer D211
     "ERA", # commented-out-code
     "FIX", # fixme
     "TD002", # todo
@@ -45,3 +46,7 @@ ignore = [
     "T20", # print
 ]
 # unfixable = ["F401"]
+
+[[tool.mypy.overrides]]
+module = ["dateparser.*", "ics.*", "requests.*"]
+ignore_missing_imports = true
