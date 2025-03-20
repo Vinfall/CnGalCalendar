@@ -2,7 +2,40 @@
 
 All notable changes to this project will be documented in this file.
 
-## [2.11.3] - 2025-02-01
+## [4.0.0] - 2025-03-20
+
+### 🚀 Features
+
+- Upload calendar to release
+- Uv run
+
+### 🐛 Fixes
+
+- Typing error
+- Relax python version
+
+### 📦 Dependencies
+
+- Mv to pyproject.toml altoghther
+
+### 🎨 Styling
+
+- Rm pylint
+- Extend ruff rules to all
+- Lint via zizmor
+
+### 🛠️ Chores
+
+- Ignore everything in output/
+- Drop pypy3.11 in python matrix
+- Update .gitignore
+- Migrate to mise
+- Reschedule workflow
+- Cache pre-built wheels
+- Use cached uv
+- Adapt to pyproject.toml
+
+## [2.11.3] - 2025-03-20
 
 ### 🐛 Fixes
 
@@ -23,7 +56,7 @@ All notable changes to this project will be documented in this file.
 - Mute version bump in changelog
 - Update metadata in pyproject.toml
 
-## [2.11.2] - 2024-12-29
+## [2.11.2] - 2025-03-20
 
 ### 🐛 Fixes
 
@@ -34,7 +67,7 @@ All notable changes to this project will be documented in this file.
 
 - Temp block index/5584
 
-## [2.11.0] - 2024-12-07
+## [2.11.0] - 2025-03-20
 
 ### 🚀 Features
 
@@ -48,26 +81,26 @@ All notable changes to this project will be documented in this file.
 
 - Lint
 
-## [2.8.3] - 2024-12-07
+## [2.8.3] - 2025-03-20
 
 ### 📚 Docs
 
 - Silent changelog update
 
-## [2.8.2] - 2024-11-08
+## [2.8.2] - 2025-03-20
 
 ### 🐛 Fixes
 
 - Regex syntax
 
-## [2.8.1] - 2024-11-03
+## [2.8.1] - 2025-03-20
 
 ### 🐛 Fixes
 
 - Date parse error caused by index/5835
 - Fix pypy -mpip install
 
-## [2.7.1] - 2024-10-09
+## [2.7.1] - 2025-03-20
 
 ### 🐛 Fixes
 
@@ -84,7 +117,7 @@ All notable changes to this project will be documented in this file.
 - Add pypy3.10 to Python Matrix
 - Update ref
 
-## [2.5.2] - 2024-08-15
+## [2.5.2] - 2025-03-20
 
 ### 🎨 Styling
 
@@ -96,13 +129,13 @@ All notable changes to this project will be documented in this file.
 - Ignore test on docs change
 - Cache installed packages
 
-## [2.4.1] - 2024-08-11
+## [2.4.1] - 2025-03-20
 
 ### 🐛 Fixes
 
 - Date parse error caused by index/5597
 
-## [2.4.0] - 2024-08-03
+## [2.4.0] - 2025-03-20
 
 ### 🚀 Features
 
@@ -112,13 +145,13 @@ All notable changes to this project will be documented in this file.
 
 - Add changelog
 
-## [2.3.2] - 2024-07-28
+## [2.3.2] - 2025-03-20
 
 ### 🎨 Styling
 
 - Lint
 
-## [2.3.1] - 2024-07-06
+## [2.3.1] - 2025-03-20
 
 ### 📦 Dependencies
 
@@ -128,7 +161,7 @@ All notable changes to this project will be documented in this file.
 
 - Add commit msg prefix
 
-## [2.2.0] - 2024-06-23
+## [2.2.0] - 2025-03-20
 
 ### 🚀 Features
 
@@ -145,11 +178,7 @@ personal blocklist
 - Bump requests from 2.32.2 to 2.32.3
 - Bump requests from 2.32.0 to 2.32.2
 
-### 🛠️ Chores
-
-- Discard hacky & faulty sed replacement
-
-## [2.0.1] - 2024-05-21
+## [2.0.1] - 2025-03-20
 
 ### 🚀 Features
 
@@ -166,38 +195,39 @@ personal blocklist
 
 ### 🛠️ Chores
 
+- Discard hacky & faulty sed replacement
 - Reschedule as no more commit flooding
 
-## [1.2.1] - 2024-02-17
+## [1.2.1] - 2025-03-20
 
 ### 🐛 Fixes
 
 - Fix release filename
-
-## [1.2.0] - 2024-02-17
-
-### 🐛 Fixes
-
 - Fix ics eol
+
+## [1.2.0] - 2025-03-20
 
 ### 🛠️ Chores
 
 - Update ics only if new release is available
 
-## [1.1.2] - 2024-02-09
+## [1.1.2] - 2025-03-20
 
 ### 🛠️ Chores
 
 - Ignore tba release
 - Update commit message
 - Permission
-- Ignore test on output push
 
-## [1.1.0] - 2024-01-30
+## [1.1.0] - 2025-03-20
 
 ### 🚀 Features
 
 - Better handling of release date
+
+### 🛠️ Chores
+
+- Ignore test on output push
 
 ## [1.0.0] - 2024-01-15
 

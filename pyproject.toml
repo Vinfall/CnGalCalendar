@@ -1,6 +1,6 @@
 [project]
 name = "CnGalCalendar"
-version = "2.11.4"
+version = "4.0.0"
 description = "CnGal 游戏发售日历"
 keywords = ["calendar", "cngal", "cngal-api", "galgame", "game", "visualnovel", "ics", "icalendar"]
 requires-python = ">=3.10"
