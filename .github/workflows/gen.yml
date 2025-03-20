@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     permissions:
-      contents: write
+      contents: write # required to make release
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -32,21 +32,14 @@ jobs:
 
       - run: uv run cngal_calendar.py
 
-      - name: check release changes
-        id: check_changes
-        run: if [[ $(git diff --name-only HEAD) == *"output/cngal-release.txt"* ]]; then echo "changes=true" > "$GITHUB_OUTPUT"; else echo "changes=false" > "$GITHUB_OUTPUT"; fi
-
-      - name: commit files only if new release is available
-        if: ${{ steps.check_changes.outputs.changes == 'true' }}
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -u
-          git commit -m "ics: update release calendar" -a
-
-      - name: push changes
-        if: ${{ steps.check_changes.outputs.changes == 'true' }}
-        uses: ad-m/github-push-action@master
+      - name: upload calendar to release
+        uses: ncipollo/release-action@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+          allowUpdates: true
+          prerelease: false
+          tag: continuous
+          omitBody: true
+          omitBodyDuringUpdate: true
+          omitNameDuringUpdate: true
+          artifacts: output/cngal-*
+          token: ${{ secrets.GITHUB_TOKEN }}
