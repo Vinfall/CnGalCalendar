@@ -78,7 +78,7 @@ _TO_REPLACE_ISO = (
 )
 
 # Exclude outdated ID, not meant to be misused as personal blocklist
-_INDEX_FILTER = [0, 2962, 5584]
+_INDEX_FILTER = [0, 2962, 5584, 6087]
 
 # Cli testing one-liner:
 # curl -X 'GET' 'https://api.cngal.org/api/home/ListUpcomingGames'  -H 'accept: application/json'
