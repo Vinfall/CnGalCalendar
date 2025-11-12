@@ -32,14 +32,8 @@ jobs:
 
       - run: uv run cngal_calendar.py
 
-      - name: upload calendar to release
-        uses: ncipollo/release-action@v1
-        with:
-          allowUpdates: true
-          prerelease: false
-          tag: continuous
-          omitBody: true
-          omitBodyDuringUpdate: true
-          omitNameDuringUpdate: true
-          artifacts: output/cngal-*
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: upload as release
+        run: gh release upload "${TAG}" --clobber output/cngal-*
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: continuous
