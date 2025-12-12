@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.1.3] - 2025-12-12
+
+### 📦 Dependencies
+
+- Bump uv.lock
+- Bump python matrix to 3.13~3.14 per PEP 745
+- Bump actions/checkout from 5 to 6
+- Bump Python Matrix to 3.12~3.14 per PEP 745
+- Bump dependencies
+- Bump jdx/mise-action from 2 to 3
+- Bump actions/checkout from 4 to 5
+- Bump Python Matrix to 3.12~3.14-dev as per PEP 745
+
+### 🛠️ Chores
+
+- Add dependency cooldown
+- Use native `gh release upload`
+- Block index/6087
+
 ## [4.0.0] - 2025-03-20
 
 ### 🚀 Features
@@ -13,6 +32,10 @@ All notable changes to this project will be documented in this file.
 
 - Typing error
 - Relax python version
+
+### 📚 Docs
+
+- Fix link
 
 ### 📦 Dependencies
 
