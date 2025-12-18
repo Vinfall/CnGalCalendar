@@ -118,7 +118,7 @@ def process_json(results: list[dict[str, Any]]) -> list[dict[str, Any]]:
             continue
 
         # Build new json
-        processed_result = {
+        processed_result: dict[str, Any] = {
             "url": url,
             "index": index,
             "title": result["name"],
