@@ -11,11 +11,15 @@ import os
 import re
 import sys
 from datetime import datetime, timedelta
-from typing import Any
+from re import Match
+from typing import TYPE_CHECKING, Any, Literal
 
 import dateparser
 import requests
 from ics import Calendar, Event
+
+if TYPE_CHECKING:
+    from ty_extensions import Unknown
 
 # Output files
 _OUTPUT_FOLDER = "output/"
@@ -78,7 +82,7 @@ _TO_REPLACE_ISO = (
 )
 
 # Exclude outdated ID, not meant to be misused as personal blocklist
-_INDEX_FILTER = [0, 2962, 5584, 6087]
+_INDEX_FILTER: list[int] = [0, 2962, 5584, 6087]
 
 # Cli testing one-liner:
 # curl -X 'GET' 'https://api.cngal.org/api/home/ListUpcomingGames'  -H 'accept: application/json'
@@ -87,7 +91,7 @@ _INDEX_FILTER = [0, 2962, 5584, 6087]
 def get_list() -> list[dict[str, Any]]:
     api_url = "https://api.cngal.org"
     api_upcoming = "/api/home/ListUpcomingGames"
-    headers = {"Content-Type": "application/json; charset=utf-8"}
+    headers: dict[str, str] = {"Content-Type": "application/json; charset=utf-8"}
     url = api_url + api_upcoming
 
     response = requests.get(url, headers=headers, timeout=30)
@@ -107,11 +111,13 @@ def get_list() -> list[dict[str, Any]]:
 # Process & Write results to JSON & CSV
 def process_json(results: list[dict[str, Any]]) -> list[dict[str, Any]]:
     base_url = "https://www.cngal.org/"
-    processed_results = []
+    processed_results: list[dict[str, Any]] = []
     for result in results:
         # Extract index from url
         url = base_url + result["url"]
-        index = match.group(1) if (match := re.search(r"index/(\d+)", url)) else 0
+        index: str | Any | Literal[0] = (
+            match.group(1) if (match := re.search(r"index/(\d+)", url)) else 0
+        )
 
         # Skip deprecated index
         if int(index) in _INDEX_FILTER:
@@ -137,7 +143,7 @@ def process_json(results: list[dict[str, Any]]) -> list[dict[str, Any]]:
             )
         # Format date string to ISO date
         if processed_result["released"] != "":
-            date_parts = processed_result["released"].split("-")
+            date_parts: list[str] = processed_result["released"].split("-")
             if len(date_parts) == 2:
                 processed_result["released"] = f"{date_parts[0]}-{date_parts[1]:0>2}"
             elif len(date_parts) == 3:
@@ -161,14 +167,18 @@ def process_json(results: list[dict[str, Any]]) -> list[dict[str, Any]]:
     with open(
         _OUTPUT_FOLDER + _CSV_FILE, mode="w", newline="", encoding="utf-8"
     ) as csv_file:
-        fields_to_save = ["index", "title", "raw_date"]
+        fields_to_save: list[str] = ["index", "title", "raw_date"]
         # Use semi-column seperator to avoid mismatches
-        writer = csv.DictWriter(csv_file, fieldnames=fields_to_save, delimiter=";")
+        writer: csv.DictWriter[str] = csv.DictWriter(
+            csv_file, fieldnames=fields_to_save, delimiter=";"
+        )
 
         writer.writeheader()
         for result in processed_results:
             # Compact fields
-            selected_data = {field: result[field] for field in fields_to_save}
+            selected_data: dict[str | Unknown, Any] = {
+                field: result[field] for field in fields_to_save
+            }
             writer.writerow(selected_data)
 
     return processed_results
@@ -200,30 +210,32 @@ def last_day_of_next_month(dt: datetime) -> datetime:
 # Make calendar
 def make_calendar(processed_results: list[dict[str, Any]]) -> None:
     cal = Calendar(creator="CnGalCalendar")
-    now = datetime.now()  # noqa: DTZ005
+    now: datetime = datetime.now()  # noqa: DTZ005
 
     for result in processed_results:
         description_suffix = ""
-        description = result["url"] + "\n" + result["intro"]
-        index = result["index"]
-        title = result["title"]
-        release_date = result["released"]
+        description: str = result["url"] + "\n" + result["intro"]
+        index: int = result["index"]
+        title: str = result["title"]
+        release_date: str | Any = result["released"]
 
         # Parse date to better fit into reality
         # Match release date like `2026`
-        year_only_match = re.match(_YEAR_ONLY_REGEX, release_date)
+        year_only_match: Match[str] | None = re.match(_YEAR_ONLY_REGEX, release_date)
         if year_only_match:
-            year = year_only_match.group(1)
+            year: str | Any = year_only_match.group(1)
             # If Sep 15 of this year passed, use the end of year
             mid_release_date = datetime.strptime(  # noqa: DTZ007
                 year + _MID_YEAR, "%Y-%m-%d"
             ).date()
-            release_date = year + (
+            release_date: str | Any = year + (
                 _MID_YEAR if mid_release_date > now.date() else "-12-31"
             )
             description_suffix = f'\n发售日估算自 "{result["raw_date"]}"'
         # Complete remaining release date like `2024-03`
-        yyyymm_only_match = re.match(_YYYYMM_ONLY_REGEX, release_date)
+        yyyymm_only_match: Match[str] | None = re.match(
+            _YYYYMM_ONLY_REGEX, release_date
+        )
         if yyyymm_only_match:
             release_date = dateparser.parse(
                 release_date,
@@ -237,13 +249,13 @@ def make_calendar(processed_results: list[dict[str, Any]]) -> None:
             while release_date.date() < now.date():
                 # If the estimated release date has already passed,
                 # pick the earliest upcoming last-of-a-month date
-                release_date = last_day_of_next_month(release_date)
+                release_date: datetime = last_day_of_next_month(release_date)
                 # Only show estimation message in above cases
                 description_suffix = f'\n发售日估算自 "{result["raw_date"]}"'
 
         # Ensure release_date is a datetime object
         if isinstance(release_date, str):
-            release_date = datetime.strptime(release_date, "%Y-%m-%d")  # noqa: DTZ007
+            release_date: datetime = datetime.strptime(release_date, "%Y-%m-%d")  # noqa: DTZ007
 
         # TODO: include more info
         event = Event(
@@ -263,6 +275,6 @@ def make_calendar(processed_results: list[dict[str, Any]]) -> None:
 
 
 os.makedirs(_OUTPUT_FOLDER, exist_ok=True)
-j = get_list()
-events = process_json(j)
+j: list[dict[str, Any]] = get_list()
+events: list[dict[str, Any]] = process_json(j)
 make_calendar(events)
