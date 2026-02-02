@@ -82,7 +82,7 @@ _TO_REPLACE_ISO = (
 )
 
 # Exclude outdated ID, not meant to be misused as personal blocklist
-# _INDEX_FILTER: list[int] = [0, 6087]
+_INDEX_FILTER: list[int] = [0, 6013]
 
 # Cli testing one-liner:
 # curl -X 'GET' 'https://api.cngal.org/api/home/ListUpcomingGames'  -H 'accept: application/json'
@@ -120,8 +120,8 @@ def process_json(results: list[dict[str, Any]]) -> list[dict[str, Any]]:
         )
 
         # Skip deprecated index
-        # if int(index) in _INDEX_FILTER:
-        #     continue
+        if int(index) in _INDEX_FILTER:
+            continue
 
         # Build new json
         processed_result: dict[str, Any] = {
