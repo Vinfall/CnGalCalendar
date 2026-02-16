@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.2.4] - 2026-02-16
+
+### 🐛 Fixes
+
+- Date parse error caused by index/6013
+
+### 📦 Dependencies
+
+- Bump uv.lock
+
+### 🎨 Styling
+
+- Lint via tombi
+- Typing
+- Mypy -> ty
+
+### 🛠️ Chores
+
+- Ubuntu-latest -> ubuntu-slim
+- Disable _INDEX_FILTER
+
 ## [4.1.3] - 2025-12-12
 
 ### 📦 Dependencies
