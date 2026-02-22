@@ -1,0 +1,41 @@
+#:tombi schema.strict = false
+
+[tools]
+uv = "latest"
+ruff = "latest"
+ty = "latest"
+
+[settings]
+python.uv_venv_auto = "source"
+python.compile = false
+
+[settings.pipx]
+uvx = true
+
+[tasks.build]
+description = "build CnGalCalendar"
+run = "uv run cngal_calendar.py"
+alias = ["default"]
+
+[tasks."lint:py"]
+description = "lint python"
+run = """
+#!/usr/bin/env bash
+ruff check --fix *.py
+ty check
+"""
+
+[tasks.lint]
+description = "run linters and apply fixes"
+depends = ["lint:*"]
+
+[tasks.changelog]
+confirm = "git tag?"
+description = "generate changelog"
+run = """
+#!/usr/bin/env bash
+git cliff -o CHANGELOG.md
+git add CHANGELOG.md
+git commit -m 'chore: update changelog'
+"""
+alias = "bump"
