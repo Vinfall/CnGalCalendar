@@ -1,6 +1,10 @@
+# config
+.vscode
+.zed
+# cache
 .venv
 *.egg-info
 __pycache__/*
-.mypy_cache
+# build
 output/*
 !output/.gitkeep
