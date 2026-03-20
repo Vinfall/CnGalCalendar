@@ -4,11 +4,12 @@
 
 ## 介绍
 
-这是一个创建 [CnGal][cngal] 游戏发售日历的小工具，由 GitHub Actions 定期更新。你可以[点击这里][release]获取订阅地址，并在任意支持 iCalendar 的日历应用中订阅。
+由 GitHub Action 自动更新的 [CnGal][cngal] 游戏发售日历。
+你可以[点击这里][release]获取订阅地址，并在任意支持 iCalendar 的日历应用中订阅。
 
 ## 目的
 
-CnGal 没有提供最近发售游戏的 RSS，这是个人使用的替代方案（虽然协议从 RSS 修改为 ICS），同时当作博客文章 [iCalendar (ICS) 的养成方式][ics] 的拓展。
+CnGal 没有提供最近发售游戏的 RSS，这是个人使用的替代方案，同时当作博客文章 [iCalendar (ICS) 的养成方式][ics] 的拓展。
 
 ## 待办
 
