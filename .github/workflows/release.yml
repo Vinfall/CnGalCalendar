@@ -26,6 +26,7 @@ jobs:
         with:
           install: true
           cache: true
+          cache_key_prefix: "release"
           tool_versions: |
             python ${{ matrix.python-version }}
             uv latest
