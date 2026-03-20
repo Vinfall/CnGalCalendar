@@ -1,5 +1,3 @@
-#:tombi schema.strict = false
-
 [project]
 name = "CnGalCalendar"
 version = "4.2.4"
