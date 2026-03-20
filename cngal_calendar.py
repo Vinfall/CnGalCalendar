@@ -5,6 +5,15 @@
 # ICS: https://icspy.readthedocs.io/en/stable/api.html#event
 # Dateparser: https://dateparser.readthedocs.io/en/latest/settings.html#handling-incomplete-dates
 
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#   "dateparser>=1.2.2",
+#   "ics==0.8.0.dev0",
+#   "requests>=2.32.5",
+# ]
+# ///
+
 import csv
 import json
 import os
