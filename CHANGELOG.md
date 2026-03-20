@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.6.1] - 2026-03-20
+
+### 🚀 Features
+
+- Add inline metadata
+
+### 🐛 Fixes
+
+- Fix: briefIntroduction could be null
+caused by index/6734
+
+### 📦 Dependencies
+
+- Bump uv.lock
+- Bump jdx/mise-action from 3 to 4
+
+### 🎨 Styling
+
+- Re-enable tombi schema.strict
+- Tweak tombi schema.strict
+
+### 🛠️ Chores
+
+- Create uv venv when unavailable
+- Set cache_key_prefix to avoid cache pollution
+- Pip -> uv in dependabot
+- Update .gitignore
+- Commit .mise.toml
+
 ## [4.2.4] - 2026-02-16
 
 ### 🐛 Fixes
