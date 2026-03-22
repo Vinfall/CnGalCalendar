@@ -219,9 +219,9 @@ def make_calendar(processed_results: list[dict[str, Any]]) -> None:
     now: datetime = datetime.now()  # noqa: DTZ005
 
     for result in processed_results:
+        intro: str | None = result.get("intro")
         description_suffix: str = ""
-        intro: str = result.get("intro") or ""
-        description: str = f"{result['url']}\n{intro}"
+        description: str = f"{result['url']}\n{intro}" if intro else result['url']
         index: int = result["index"]
         title: str = result["title"]
         release_date: str | Any = result["released"]
@@ -239,7 +239,7 @@ def make_calendar(processed_results: list[dict[str, Any]]) -> None:
                 _MID_YEAR if mid_release_date > now.date() else "-12-31"
             )
             description_suffix = f'\n发售日估算自 "{result["raw_date"]}"'
-        # Complete remaining release date like `2024-03`
+        # Complete remaining release date like `2026-04`
         yyyymm_only_match: Match[str] | None = re.match(
             _YYYYMM_ONLY_REGEX, release_date
         )
@@ -264,7 +264,6 @@ def make_calendar(processed_results: list[dict[str, Any]]) -> None:
         if isinstance(release_date, str):
             release_date: datetime = datetime.strptime(release_date, "%Y-%m-%d")  # noqa: DTZ007
 
-        # TODO: include more info
         event = Event(
             uid=index,
             summary=title,
