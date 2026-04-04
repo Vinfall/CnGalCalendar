@@ -16,7 +16,7 @@ classifiers = [
   "Topic :: File Formats",
   "Topic :: Games/Entertainment",
 ]
-dependencies = ["dateparser>=1.4.0", "ics==0.8.0.dev0", "requests>=2.33.0"]
+dependencies = ["dateparser>=1.4.0", "ics==0.8.0.dev0", "requests>=2.33.1"]
 
 [project.urls]
 changelog = "https://github.com/Vinfall/CnGalCalendar/blob/main/CHANGELOG.md"
