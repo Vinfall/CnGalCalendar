@@ -1,6 +1,10 @@
 version = 1
 revision = 3
 requires-python = ">=3.10"
+resolution-markers = [
+    "python_full_version >= '3.14'",
+    "python_full_version < '3.14'",
+]
 
 [[package]]
 name = "attrs"
@@ -163,7 +167,8 @@ version = "0.8.0.dev1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "attrs" },
-    { name = "ics-vtimezones" },
+    { name = "ics-vtimezones", version = "2020.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "ics-vtimezones", version = "2026.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
     { name = "python-dateutil" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/bc/2b/12dff7b4bc9360168742c38690ba0f5f497c46f1a9541c4255f03afe5fa0/ics-0.8.0.dev1.tar.gz", hash = "sha256:b44f294f1a10f0fb938580a4c9c29ec8a5b6c3c5dbfac7fa3a4d9232334a5e4c", size = 301136, upload-time = "2026-04-15T11:36:43.133Z" }
@@ -175,12 +180,27 @@ wheels = [
 name = "ics-vtimezones"
 version = "2020.2"
 source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.14'",
+]
 dependencies = [
-    { name = "importlib-resources" },
+    { name = "importlib-resources", marker = "python_full_version < '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/1a/ae/e47d7da7005e77c397b6fb990abae7a8cd30d9b0f14d721e0f17ac49c7c5/ics_vtimezones-2020.2.tar.gz", hash = "sha256:ee02fb3bb7df7e2e60ea11ad07ca30d3fee4d40929ae496651f76b76dc1cac73", size = 29429, upload-time = "2023-12-30T18:40:26.707Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/f5/f0/30131bdb34f5e6512156b05c0e1eac7c3b7f4fee6a42e92bb3034e548d72/ics_vtimezones-2020.2-py3-none-any.whl", hash = "sha256:e26de1a7e732b53f23bce88431ce6b2db59d03aad72f47d5785bfa3f56cdf118", size = 184659, upload-time = "2023-12-30T18:40:24.651Z" },
+]
+
+[[package]]
+name = "ics-vtimezones"
+version = "2026.1"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.14'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/0d/d7/4963e8b3dbfb1fab116cf4aaa5b7d64b4b6307f96448e0f3b6f5013b0339/ics_vtimezones-2026.1.tar.gz", hash = "sha256:1e4024baa3a74cfc97a223027560fc8dfbf0d2f76ddc5aad787d15492b9c76d1", size = 22885, upload-time = "2026-04-15T10:57:38.458Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a4/c5/ba2cd4d893a07ffd6eef2ecbb0b85ad409926028413a6d13fe61d0cb920d/ics_vtimezones-2026.1-py3-none-any.whl", hash = "sha256:893a9854d809d794c425143c297ad106995a556034ab54d0a208cc20d27c5ac9", size = 185545, upload-time = "2026-04-15T10:57:37.149Z" },
 ]
 
 [[package]]
@@ -194,11 +214,11 @@ wheels = [
 
 [[package]]
 name = "importlib-resources"
-version = "6.5.2"
+version = "7.1.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/cf/8c/f834fbf984f691b4f7ff60f50b514cc3de5cc08abfc3295564dd89c5e2e7/importlib_resources-6.5.2.tar.gz", hash = "sha256:185f87adef5bcc288449d98fb4fba07cea78bc036455dd44c5fc4a2fe78fed2c", size = 44693, upload-time = "2025-01-03T18:51:56.698Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e4/06/b56dfa750b44e86157093bc8fca0ab81dccbf5260510de4eaf1cb69b5b99/importlib_resources-7.1.0.tar.gz", hash = "sha256:0722d4c6212489c530f2a145a34c0a7a3b4721bc96a15fada5930e2a0b760708", size = 44985, upload-time = "2026-04-12T16:36:09.232Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a4/ed/1f1afb2e9e7f38a545d628f864d562a5ae64fe6f7a10e28ffb9b185b4e89/importlib_resources-6.5.2-py3-none-any.whl", hash = "sha256:789cfdc3ed28c78b67a06acb8126751ced69a3d5f79c095a98298cd8a760ccec", size = 37461, upload-time = "2025-01-03T18:51:54.306Z" },
+    { url = "https://files.pythonhosted.org/packages/8a/db/55a262f3606bebcae07cc14095338471ad7c0bbcaa37707e6f0ee49725b7/importlib_resources-7.1.0-py3-none-any.whl", hash = "sha256:1bd7b48b4088eddb2cd16382150bb515af0bd2c70128194392725f82ad2c96a1", size = 37232, upload-time = "2026-04-12T16:36:08.219Z" },
 ]
 
 [[package]]
