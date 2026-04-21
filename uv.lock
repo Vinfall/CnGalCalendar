@@ -138,7 +138,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "dateparser", specifier = ">=1.4.0" },
-    { name = "ics", specifier = "==0.8.0.dev0" },
+    { name = "ics", specifier = "==0.8.0.dev1" },
     { name = "requests", specifier = ">=2.33.1" },
 ]
 
@@ -159,16 +159,16 @@ wheels = [
 
 [[package]]
 name = "ics"
-version = "0.8.0.dev0"
+version = "0.8.0.dev1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "attrs" },
     { name = "ics-vtimezones" },
     { name = "python-dateutil" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d4/9e/d551e7429876a59ca0ae66f41664e09f2a403d6eb18047388741c68486c0/ics-0.8.0.dev0.tar.gz", hash = "sha256:51169026b9368e88abf167e7a86cb39c576299d7c36a871f1a39e36beabcfcae", size = 297842, upload-time = "2022-08-18T22:00:22.165Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/bc/2b/12dff7b4bc9360168742c38690ba0f5f497c46f1a9541c4255f03afe5fa0/ics-0.8.0.dev1.tar.gz", hash = "sha256:b44f294f1a10f0fb938580a4c9c29ec8a5b6c3c5dbfac7fa3a4d9232334a5e4c", size = 301136, upload-time = "2026-04-15T11:36:43.133Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/4b/7a/510a6aa44638923bc1b46ad4f529169875fe744da92ad44cf274c80c1779/ics-0.8.0.dev0-py3-none-any.whl", hash = "sha256:7b78a02d3aa7e7143f27ff9072390cbda5795839f59fd09bd2f404932b49eaf6", size = 60759, upload-time = "2022-08-18T22:00:20.224Z" },
+    { url = "https://files.pythonhosted.org/packages/de/96/3059add06e99718f1217e8e5e4ca51f327928852ca407943c1c555664834/ics-0.8.0.dev1-py3-none-any.whl", hash = "sha256:036dbb2806fb081646b2fe97aaa5e0df4a158e49829ee50eca5d3782699ef2b4", size = 61213, upload-time = "2026-04-15T11:36:41.794Z" },
 ]
 
 [[package]]
