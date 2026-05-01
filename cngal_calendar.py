@@ -93,6 +93,7 @@ _TO_REPLACE_ISO = (
 # Exclude outdated ID, not meant to be misused as personal blocklist
 _INDEX_FILTER: list[int] = [0, 6013]
 
+
 # curl -X 'GET' 'https://api.cngal.org/api/home/ListUpcomingGames'  -H 'accept: application/json'
 def get_list() -> list[dict[str, Any]]:
     api_url = "https://api.cngal.org"
@@ -221,7 +222,7 @@ def make_calendar(processed_results: list[dict[str, Any]]) -> None:
     for result in processed_results:
         intro: str | None = result.get("intro")
         description_suffix: str = ""
-        description: str = f"{result['url']}\n{intro}" if intro else result['url']
+        description: str = f"{result['url']}\n{intro}" if intro else result["url"]
         index: int = result["index"]
         title: str = result["title"]
         release_date: str | Any = result["released"]
