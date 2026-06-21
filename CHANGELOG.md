@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.6.2] - 2026-06-21
+
+### 📦 Dependencies
+
+- Bump actions/checkout from 6 to 7
+- Bump uv.lock
+- Bump ics from 0.8.0.dev0 to 0.8.0.dev1
+- Bump requests from 2.30.0 to 2.30.1
+- Bump dependencies
+
+### 🎨 Styling
+
+- Lint via ruff
+
 ## [4.6.1] - 2026-03-20
 
 ### 🚀 Features
