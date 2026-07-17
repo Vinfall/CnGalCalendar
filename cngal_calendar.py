@@ -2,14 +2,14 @@
 
 # Documentation
 # CnGal: https://api.cngal.org/swagger/index.html
-# ICS: https://icspy.readthedocs.io/en/stable/api.html#event
+# ical:  https://allenporter.github.io/ical/ical.html#quickstart
 # Dateparser: https://dateparser.readthedocs.io/en/latest/settings.html#handling-incomplete-dates
 
 # /// script
 # requires-python = ">=3.12"
 # dependencies = [
 #   "dateparser>=1.4.1",
-#   "ics==0.8.0.dev1",
+#   "ical>=14.0.0",
 #   "requests>=2.34.2",
 # ]
 # ///
@@ -25,7 +25,9 @@ from typing import TYPE_CHECKING, Any, Literal
 
 import dateparser
 import requests
-from ics import Calendar, Event
+from ical.calendar import Calendar
+from ical.calendar_stream import IcsCalendarStream
+from ical.event import Event
 
 if TYPE_CHECKING:
     from ty_extensions import Unknown
@@ -175,7 +177,7 @@ def process_json(results: list[dict[str, Any]]) -> list[dict[str, Any]]:
         _OUTPUT_FOLDER + _CSV_FILE, mode="w", newline="", encoding="utf-8"
     ) as csv_file:
         fields_to_save: list[str] = ["index", "title", "raw_date"]
-        # Use semi-column seperator to avoid mismatches
+        # Use semi-column separator to avoid mismatches
         writer: csv.DictWriter[str] = csv.DictWriter(
             csv_file, fieldnames=fields_to_save, delimiter=";"
         )
@@ -216,7 +218,7 @@ def last_day_of_next_month(dt: datetime) -> datetime:
 
 # Make calendar
 def make_calendar(processed_results: list[dict[str, Any]]) -> None:
-    cal = Calendar(creator="CnGalCalendar")
+    cal = Calendar(prodid="CnGalCalendar")
     now: datetime = datetime.now()  # noqa: DTZ005
 
     for result in processed_results:
@@ -269,16 +271,15 @@ def make_calendar(processed_results: list[dict[str, Any]]) -> None:
             uid=index,
             summary=title,
             description=description + description_suffix,
-            begin=release_date,
+            start=release_date,
             last_modified=now,
             dtstamp=now,
             categories=["cngal"],
         )
-        event.make_all_day()
         cal.events.append(event)
 
     with open(_OUTPUT_FOLDER + _ICS_FILE, "w", encoding="utf-8") as f:
-        f.write(cal.serialize())
+        f.write(IcsCalendarStream.calendar_to_ics(cal))
 
 
 os.makedirs(_OUTPUT_FOLDER, exist_ok=True)

@@ -3,7 +3,7 @@ name = "CnGalCalendar"
 version = "4.6.2"
 description = "CnGal 游戏发售日历"
 readme = { file = "README.md", content-type = "text/markdown" }
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 license = "BSD-3-Clause"
 license-files = ["LICENSE"]
 authors = [{ name = "Vinfall" }]
@@ -16,7 +16,7 @@ classifiers = [
   "Topic :: File Formats",
   "Topic :: Games/Entertainment",
 ]
-dependencies = ["dateparser>=1.4.1", "ics==0.8.0.dev1", "requests>=2.34.2"]
+dependencies = ["dateparser>=1.4.1", "ical>=14.0.0", "requests>=2.34.2"]
 
 [project.urls]
 changelog = "https://github.com/Vinfall/CnGalCalendar/blob/main/CHANGELOG.md"
