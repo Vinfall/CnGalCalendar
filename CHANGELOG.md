@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.6.3] - 2026-07-17
+
+### 📦 Dependencies
+
+- Bump uv.lock
+
 ## [4.6.2] - 2026-06-21
 
 ### 📦 Dependencies
