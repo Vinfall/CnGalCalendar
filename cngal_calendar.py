@@ -8,7 +8,7 @@
 # /// script
 # requires-python = ">=3.12"
 # dependencies = [
-#   "dateparser>=1.4.1",
+#   "dateparser>=1.4.2",
 #   "ical>=14.0.1",
 #   "requests>=2.34.2",
 # ]
