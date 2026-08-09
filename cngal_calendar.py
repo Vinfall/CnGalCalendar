@@ -60,10 +60,14 @@ _TO_REPLACE = (
     ("q3(季度)?", "8月"),
     ("q4(季度)?", "11月"),
     # Alias third
-    ("第一季度", "2月"),
-    ("第二季度", "5月"),
-    ("第三季度", "8月"),
-    ("第四季度", "11月"),
+    ("年第一季度", "年2月"),
+    ("年第二季度", "年5月"),
+    ("年第三季度", "年8月"),
+    ("年第四季度", "年11月"),
+    ("第一季度", "年2月"),  # 2026第三季度 -> 2026年8月
+    ("第二季度", "年5月"),
+    ("第三季度", "年8月"),
+    ("第四季度", "年11月"),
     ("年初", "年1月"),
     ("年[底内末]", "年12月"),
     ("上旬", "10日"),
@@ -93,7 +97,7 @@ _TO_REPLACE_ISO = (
 )
 
 # Exclude outdated ID, not meant to be misused as personal blocklist
-_INDEX_FILTER: list[int] = [0, 6013]
+_INDEX_FILTER: list[int] = [0]
 
 
 # curl -X 'GET' 'https://api.cngal.org/api/home/ListUpcomingGames'  -H 'accept: application/json'
