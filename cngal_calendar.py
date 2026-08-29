@@ -88,7 +88,6 @@ _TO_REPLACE = (
     ("宣布.*?$", ""),
     ("[Ww]ishlist.*?$", ""),
     ("TB[AD]|tb[ad]", ""),
-    (" ", ""),
 )
 # Convert time string like `2024年8月` to partial/full YYYY-MM-DD
 _TO_REPLACE_ISO = (
@@ -146,7 +145,13 @@ def process_json(results: list[dict[str, Any]]) -> list[dict[str, Any]]:
             "raw_date": result["publishTime"],
             "intro": result["briefIntroduction"],
         }
-        # Make ambiguous release date like `预计2024年发售` and `2022年底` machine-readable
+        # strip space
+        processed_result["released"] = re.sub(
+            r"\s+",
+            "",
+            processed_result["released"],
+        )
+        # parse ambiguous date, e.g. `预计2024年发售`, `2022年底`
         for pair in _TO_REPLACE:
             processed_result["released"] = re.sub(
                 pair[0], pair[1], processed_result["released"].lower()
