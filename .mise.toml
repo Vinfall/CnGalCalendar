@@ -3,7 +3,7 @@ uv = "latest"
 
 [settings]
 python.uv_venv_auto = "create|source"
-python.compile = false
+# python.compile = false
 
 [settings.pipx]
 uvx = true
