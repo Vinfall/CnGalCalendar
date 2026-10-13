@@ -9,7 +9,7 @@
 # requires-python = ">=3.12"
 # dependencies = [
 #   "dateparser>=1.4.3",
-#   "ical>=14.2.0",
+#   "ical>=14.3.0",
 #   "requests>=2.34.2",
 # ]
 # ///
