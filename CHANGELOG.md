@@ -2,18 +2,53 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.6.3] - 2026-07-17
+## [4.8.1] - 2026-10-23
 
 ### 📦 Dependencies
 
-- Bump uv.lock
+- Bump dependencies
+- Bump jdx/mise-action from 5.1.1 to 5.2.1
+- Bump ical from 14.2.0 to 14.3.0
+- Bump python matrix to 3.14~3.15
+- Bump jdx/mise-action from 5.0.1 to 5.1.1
+- Bump python matrix to 3.14~3.15-dev
+- Bump jdx/mise-action to v5.0.1, pin to hash
+
+### 🛠️ Chores
+
+- Hide uv.lock changelog
+- Unset python.compile to allow python 3.15
+- Disable persist-credentials in actions/checkout
+- Migrate to global templates
+
+## [4.7.3] - 2026-10-04
+
+### 🐛 Fixes
+
+- Strip space before replace
+- Delisted games
+- Date parse error of index/6214
+
+### 📦 Dependencies
+
+- Bump dependencies
+- Bump ical from 14.0.1 to 14.1.1
+- Bump dateparser from 1.4.1 to 1.4.2
+- Bump ical from 14.0.0 to 14.0.1
+
+### 🎨 Styling
+
+- Ignore CPY rule in ruff
+
+### 🛠️ Chores
+
+- Ubuntu-slim -> ubuntu-26.04
 
 ## [4.6.2] - 2026-06-21
 
 ### 📦 Dependencies
 
 - Bump actions/checkout from 6 to 7
-- Bump uv.lock
 - Bump ics from 0.8.0.dev0 to 0.8.0.dev1
 - Bump requests from 2.30.0 to 2.30.1
 - Bump dependencies
@@ -35,7 +70,6 @@ caused by index/6734
 
 ### 📦 Dependencies
 
-- Bump uv.lock
 - Bump jdx/mise-action from 3 to 4
 
 ### 🎨 Styling
@@ -57,10 +91,6 @@ caused by index/6734
 
 - Date parse error caused by index/6013
 
-### 📦 Dependencies
-
-- Bump uv.lock
-
 ### 🎨 Styling
 
 - Lint via tombi
@@ -76,7 +106,6 @@ caused by index/6734
 
 ### 📦 Dependencies
 
-- Bump uv.lock
 - Bump python matrix to 3.13~3.14 per PEP 745
 - Bump actions/checkout from 5 to 6
 - Bump Python Matrix to 3.12~3.14 per PEP 745
