@@ -75,6 +75,7 @@ commit_parsers = [
   { message = "^test", group = "<!-- 6 -->🧪 Testing" },
   # hacky, but it works, an extra \ is used to escape in toml
   { message = "^chore/release: prepare for", skip = true },
+  { message = "bump uv.lock", skip = true },
   { message = "^build/deps|^ci: bump", group = "<!-- 4 -->📦 Dependencies" },
   { message = "^chore/pr", skip = true },
   { message = "^chore/pull", skip = true },
