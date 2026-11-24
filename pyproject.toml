@@ -50,4 +50,4 @@ ignore = [
 # unfixable = ["F401"]
 
 [tool.ty.rules]
-unresolved-import = "ignore" # .venv excluded from vsc/zed
+import-not-found = "ignore" # .venv excluded from vsc/zed
